@@ -14,88 +14,92 @@
 	<!-- Menu bar -->
 	<nav>
 		<img src="images/logo.png" alt="company logo">
-		<a href="index.html" class="menu-option">Home Page</a>
-		<a href="jobs.html" class="menu-option">Open Job Positions</a>
-		<a href="apply.html" class="menu-option">Apply for a Job</a>
-		<a href="about.html" class="menu-option">About Us</a>
+		<a href="index.html">Home Page</a>
+		<a href="jobs.html">Open Job Positions</a>
+		<a href="apply.html">Apply for a Job</a>
+		<a href="about.html">About Us</a>
 	</nav>
-	<h1>Job Application</h1>
-	<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-		<!-- Dropdown to select which job to apply for -->
-		<label for="job_selection">Select job listing</label>
-		<select id="job_selection" name="job_selection" required>
-			<option value="job1">Job 1</option>
-			<option value="job2">Job 2</option>
-		</select><br>
-		<!-- Personal details -->
-		<fieldset>
-			<legend>Personal details</legend>
-			<!-- Applicant's first name -->
-			<label for="first_name">First Name: </label>
-			<input type="text" id="first_name" name="first_name" pattern="[A-Za-z]{1,20}" maxlength="20" required><br>
-			<!-- Applicant's last name -->
-			<label for="last_name">Last Name: </label>
-			<input type="text" id="last_name" name="last_name" pattern="[A-Za-z]{1,20}" maxlength="20" required><br>
-			<!-- Applicant's date of birth -->
-			<label for="dob">Date of Birth: </label>
-			<input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="^\d{2}\/\d{2}\/\d{4}$"required>
-			<!-- Radio options for Applicant's gender -->
-			<p>Gender:
-				<input type="radio" id="male" name="gender" required>
-				<label for="male">Male</label>
-				<input type="radio" id="female" name="gender">
-				<label for="female">Female</label>
-				<input type="radio" id="other" name="gender">
-				<label for="other">Other</label>
-				<input type="radio" id="undisclosed" name="gender">
-				<label for="undisclosed">Prefer not to say</label>
-			</p>
-		</fieldset>
-		<!-- Applicant's address -->
-		<fieldset>
-			<legend>Your address</legend>
-			<label for="address">Street Address: </label>
-			<input type="text" name="address" id="address" placeholder="14 Smith Street" pattern=".{1,40}"
-				maxlength="40" required><br>
-			<label for="suburb">Suburb/Town: </label>
-			<input type="text" name="suburb" id="suburb" pattern=".{1,40}" maxlength="40" required><br>
-			<label for="state">State: </label>
-			<select id="state" name="state" required>
-				<option value="empty"></option>
-				<option value="vic">VIC</option>
-				<option value="nsw">NSW</option>
-				<option value="qld">QLD</option>
-				<option value="nt">NT</option>
-				<option value="wa">WA</option>
-				<option value="sa">SA</option>
-				<option value="tas">TAS</option>
-				<option value="act">ACT</option>
-			</select> <br>
-			<label for="postcode">Postcode</label>
-			<input type="text" id="postcode" name="postcode" pattern="[\d]{4}" required><br>
-		</fieldset>
-		<!-- Applicant's contact information -->
-		<fieldset>
-			<legend>Contact Information</legend>
-			<label for="email">Email: </label>
-			<input type="email" id="email" name="email" pattern="^.+@.+[.].+$" required><br>
-			<label for="phone">Phone Number: </label>
-			<input type="tel" id="phone" name="phone" pattern="[\d\s]{8,12}" required><br>
-		</fieldset>
-		<!-- Checkboxes to indicate the applicant's technical skills -->
-		<fieldset>
-			<legend>Technical skills</legend>
-			<label for="skill1">Skill1</label>
-			<input type="checkbox" id="skill1" name="skill1" required><br>
-			<label for="skill2">Skill2</label>
-			<input type="checkbox" id="skill2" name="skill2" required><br>
-			<label for="skill3">Skill3</label>
-			<input type="checkbox" id="skill3" name="skill3" required><br>
-			<!-- space for applicant to fill in any other relevant skills -->
-			<label for="other_skills">Other skills: </label>
-			<textarea id="other_skills" name="other_skills" rows="5"></textarea><br>
-			<!-- Button to submit application -->
-			<input type="submit" id="submit" name="submit" value="Apply">
-		</fieldset>
-	</form>
+	<div id="main-container">
+		<h1>Job Application</h1>
+		<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+			<!-- Dropdown to select which job to apply for -->
+			<label for="job_selection">Select job listing</label>
+			<select id="job_selection" name="job_selection" required>
+				<option value="job1">Job 1</option>
+				<option value="job2">Job 2</option>
+			</select><br>
+			<!-- Personal details -->
+			<fieldset>
+				<legend>Personal details</legend>
+				<!-- Applicant's first name -->
+				<label for="first_name">First Name: </label>
+				<input type="text" id="first_name" name="first_name" pattern="[A-Za-z]{1,20}" maxlength="20"
+					required><br>
+				<!-- Applicant's last name -->
+				<label for="last_name">Last Name: </label>
+				<input type="text" id="last_name" name="last_name" pattern="[A-Za-z]{1,20}" maxlength="20" required><br>
+				<!-- Applicant's date of birth -->
+				<label for="dob">Date of Birth: </label>
+				<input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="^\d{2}\/\d{2}\/\d{4}$"
+					required>
+				<!-- Radio options for Applicant's gender -->
+				<p>Gender:
+					<input type="radio" id="male" name="gender" required>
+					<label for="male">Male</label>
+					<input type="radio" id="female" name="gender">
+					<label for="female">Female</label>
+					<input type="radio" id="other" name="gender">
+					<label for="other">Other</label>
+					<input type="radio" id="undisclosed" name="gender">
+					<label for="undisclosed">Prefer not to say</label>
+				</p>
+			</fieldset>
+			<!-- Applicant's address -->
+			<fieldset>
+				<legend>Your address</legend>
+				<label for="address">Street Address: </label>
+				<input type="text" name="address" id="address" placeholder="14 Smith Street" pattern=".{1,40}"
+					maxlength="40" required><br>
+				<label for="suburb">Suburb/Town: </label>
+				<input type="text" name="suburb" id="suburb" pattern=".{1,40}" maxlength="40" required><br>
+				<label for="state">State: </label>
+				<select id="state" name="state" required>
+					<option value="empty"></option>
+					<option value="vic">VIC</option>
+					<option value="nsw">NSW</option>
+					<option value="qld">QLD</option>
+					<option value="nt">NT</option>
+					<option value="wa">WA</option>
+					<option value="sa">SA</option>
+					<option value="tas">TAS</option>
+					<option value="act">ACT</option>
+				</select> <br>
+				<label for="postcode">Postcode</label>
+				<input type="text" id="postcode" name="postcode" pattern="[\d]{4}" required><br>
+			</fieldset>
+			<!-- Applicant's contact information -->
+			<fieldset>
+				<legend>Contact Information</legend>
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email" pattern="^.+@.+[.].+$" required><br>
+				<label for="phone">Phone Number: </label>
+				<input type="tel" id="phone" name="phone" pattern="[\d\s]{8,12}" required><br>
+			</fieldset>
+			<!-- Checkboxes to indicate the applicant's technical skills -->
+			<fieldset>
+				<legend>Technical skills</legend>
+				<label for="skill1">Skill1</label>
+				<input type="checkbox" id="skill1" name="skill1" required><br>
+				<label for="skill2">Skill2</label>
+				<input type="checkbox" id="skill2" name="skill2" required><br>
+				<label for="skill3">Skill3</label>
+				<input type="checkbox" id="skill3" name="skill3" required><br>
+				<!-- space for applicant to fill in any other relevant skills -->
+				<label for="other_skills">Other skills: </label>
+				<textarea id="other_skills" name="other_skills" rows="5"></textarea><br>
+				<!-- Button to submit application -->
+				<input type="submit" id="submit" name="submit" value="Apply">
+			</fieldset>
+		</form>
+	</div>
 </body>
