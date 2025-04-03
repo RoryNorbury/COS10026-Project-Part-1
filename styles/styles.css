@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    height: 100%;
+    width: 15%;
+    border: 2px solid gray;
+}
+
+nav a {
+    border: 1px solid gray;
+    display: block;
+    padding: 20px;
+}
+
+nav a:hover {
+    background-color: gray;
+}
+nav a:link {
+    color: inherit;
+    text-decoration: none;
+}
+nav a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+#main-container {
+    margin-left: 15%;
+    padding: 20px;
+}
