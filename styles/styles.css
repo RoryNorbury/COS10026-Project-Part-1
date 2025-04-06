@@ -36,3 +36,21 @@ nav a:visited {
     margin-left: 15%;
     padding: 20px;
 }
+
+/* organizing Member Contributions in about us*/
+dl.contributions {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 0.5em 1em;
+  }
+/* table for about us*/
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+  }
+  caption {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
