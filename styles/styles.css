@@ -140,3 +140,14 @@ dl.contributions {
     box-shadow: 2px 0 6px rgba(77, 52, 52, 0.5);
   }
   
+
+/* footer margins to avoid clashing with sidebar */
+  footer {
+    margin-left: 15%;
+    padding: 20px;
+    background-color: #1b1b2f;
+    color: #f0f0f0;
+    text-align: center;
+    clear: both;
+  }
+  
