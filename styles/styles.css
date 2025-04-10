@@ -53,7 +53,7 @@ dl.contributions {
     font-weight: bold;
     margin-bottom: 0.5em;
   }
-  
+
   html, body {
     font-family: "Poppins", sans-serif; 
     background: #121212;               /* dark background color */
@@ -63,7 +63,7 @@ dl.contributions {
   nav {
     background-color: #1b1b2f;
     border-color: #4b4b4b;  /* override the gray border with a darker gray */
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
   }
   
   nav a {
@@ -125,10 +125,10 @@ dl.contributions {
     background-color: #bb86fc;
     border: none;
     color: #121212;
-    padding: 10px 20px;
-    cursor: pointer;
+    padding: 10px 20px;  /* provides ample clickable space */
+    cursor: pointer; /* Changes to a pointer on hover, indicating it’s clickable. */
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Ensures any background-color change is smooth and aesthetically pleasing. */
   }
   input[type="submit"]:hover {
     background-color: #9f6fde;
