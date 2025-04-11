@@ -218,3 +218,84 @@ body {
 }
 
 
+
+/* Float photo figure right with border */
+.group-photo {
+  float: right;
+  margin: 20px;
+}
+
+.group-photo img {
+  border: 3px solid #9B57FF;
+  border-radius: 6px;
+}
+
+/* Float photo figure right with border */
+.group-photo {
+  float: right;
+  margin: 20px;
+}
+
+.group-photo img {
+  border: 3px solid #9B57FF;
+  border-radius: 6px;
+}
+
+/* Student ID list formatting */
+.students > li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.student-id-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+  max-width: 400px;
+}
+
+.student-id-list li {
+  padding: 4px 0;
+  font-weight: normal;
+}
+
+.student-id-list .name {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.student-id-list .id {
+  color: #C987FF;
+}
+
+
+/* Optional right alignment of the entire block */
+.students {
+  margin-left: auto;
+  margin-right: 5%;
+  max-width: 450px;
+}
+
+/* Centering table in section */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: #1a0a2c; /* Example deep purple */
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+  background-color: #2e004d;
+}
+
+td {
+  background-color: #1f0133;
+}
+
+/* Hover effect for table cells */
+td:hover {
+  background-color: #3d176e;
+  transition: background-color 0.3s ease;
+}
