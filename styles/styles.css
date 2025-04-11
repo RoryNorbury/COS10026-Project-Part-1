@@ -184,3 +184,25 @@ nav a.current {
   font-weight: bold;
   border-color: #9B57FF;
 }
+
+body {
+  position: relative;
+}
+
+body {
+  position: relative; /* Ensures the ::before is positioned relative to <body> */
+  margin: 0;
+
+}
+
+/* IMAGE TESTING */
+.background-logo {
+  position: fixed;          /* Keeps it fixed on the screen */
+  top: 50%;                 /* Center vertically */
+  left: 50%;                /* Center horizontally */
+  transform: translate(-50%, -50%);
+  width: 300px;             /* Adjust to your desired size */
+  opacity: 0.2;             /* Low opacity for a watermark effect */
+  z-index: -1;              /* Places the image behind other content */
+  pointer-events: none;     /* Allows clicks through the image */
+}
