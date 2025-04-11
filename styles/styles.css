@@ -5,8 +5,11 @@ body {
 }
 
 nav {
-    display: flex;
+  /* Flexbox layout */
+    display: flex; 
+    /* Arranges nav to vertical column */
     flex-direction: column;
+    /* Aligns the flex items */
     justify-content: flex-start;
     position: fixed;
     height: 100%;
@@ -24,14 +27,16 @@ nav a:hover {
     background-color: #361665;
 }
 
-/* TEsting: */
 nav a:hover {
-  transform: scale(1.05);
+  /* enlarges the link */
+  transform: scale(1.05); 
+  /* Adds a shadow */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 /* end of testing */
 nav a:link {
     color: inherit;
+    /* Removes the default underline styling */
     text-decoration: none;
 }
 nav a:visited {
@@ -46,13 +51,17 @@ nav a:visited {
 
 /* organizing Member Contributions in about us*/
 dl.contributions {
+  /* Converts the container into a grid layout */
     display: grid;
-    grid-template-columns: max-content auto;
+    /* Creates two column */
+    grid-template-columns: max-content auto; 
+    /* vertical gap 0.5em and horizontal gap 1em */
     gap: 0.5em 1em;
   }
 /* table for about us*/
 table, th, td {
     border: 1px solid #2E0059;
+    /* Merges adjacent borders into a single border */
     border-collapse: collapse;
     padding: 8px;
 }
@@ -63,7 +72,8 @@ caption {
 
 html, body {
     font-family: "Poppins", sans-serif; 
-    background: #0D001B;               /* dark background color */
+    /* Applies a dark background */
+    background: #0D001B;
     color: #F8EFFE;                    /* light text color */
 }
   
@@ -77,6 +87,7 @@ nav a {
     color: #F3E7FF;       
     border-color: #9B57FF;
     background-color: transparent;
+    /* animates any changes in background color over 0.3 seconds */
     transition: background-color 0.3s ease;
 }
   
@@ -122,6 +133,7 @@ textarea {
     background-color: #19012A;
     color: #ffffff;
     border: 1px solid #55237F;
+    /* thin border with rounded corners */
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 10px;
@@ -133,7 +145,8 @@ input[type="submit"] {
     border: none;
     color: #0D001B;
     padding: 10px 20px;
-    cursor: pointer;
+    /* Changes the cursor to a pointer to signal */
+    cursor: pointer; 
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
@@ -157,8 +170,8 @@ footer {
     clear: both;
 }
 
-/* testing */
 html {
+  /* smooth scrolling */
   scroll-behavior: smooth;
 }
 
@@ -186,6 +199,7 @@ nav a.current {
 }
 
 body {
+  /* Sets the body to a relative positioning contex */
   position: relative;
 }
 
@@ -193,16 +207,4 @@ body {
   position: relative; /* Ensures the ::before is positioned relative to <body> */
   margin: 0;
 
-}
-
-/* IMAGE TESTING */
-.background-logo {
-  position: fixed;          /* Keeps it fixed on the screen */
-  top: 50%;                 /* Center vertically */
-  left: 50%;                /* Center horizontally */
-  transform: translate(-50%, -50%);
-  width: 300px;             /* Adjust to your desired size */
-  opacity: 0.2;             /* Low opacity for a watermark effect */
-  z-index: -1;              /* Places the image behind other content */
-  pointer-events: none;     /* Allows clicks through the image */
 }
