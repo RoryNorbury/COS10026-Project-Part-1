@@ -155,7 +155,7 @@ input[type="submit"]:hover {
 }
 
 nav {
-    background-color: #150033;
+    background-color: #000000;
     border-color: #9B57FF;
     box-shadow: 2px 0 6px rgba(77, 52, 52, 0.5);
 }
@@ -208,3 +208,13 @@ body {
   margin: 0;
 
 }
+
+
+
+.background-logo {
+  position: fixed;          /* Keeps it fixed on the screen */
+  width: 600px;             /* Adjust to your desired size */
+  pointer-events: none;     /* Allows clicks through the image */
+}
+
+
