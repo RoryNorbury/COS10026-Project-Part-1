@@ -299,3 +299,20 @@ td:hover {
   background-color: #3d176e;
   transition: background-color 0.3s ease;
 }
+
+/* seperates job positions */
+section.job-description {
+  border: 2px solid #A881FF;
+  margin-bottom: 20px;
+  background-color: #210B35; /* subtle cosmic background */
+  border-radius: 10px;
+}
+
+section.job-description h2, h3 {
+  padding: 10px 20px;
+}
+
+section.job-description p {
+  padding: 0px 40px;
+}
+
