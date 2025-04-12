@@ -219,83 +219,121 @@ body {
 
 
 
-/* Float photo figure right with border */
-.group-photo {
-  float: right;
-  margin: 20px;
+
+/* About Page Specific Styles */
+.info-box {
+  background-color: #1a0a2c;
+  border: 2px solid #55237F;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 70%; /* Leaves space for student IDs */
 }
 
-.group-photo img {
-  border: 3px solid #9B57FF;
-  border-radius: 6px;
-}
-
-/* Float photo figure right with border */
-.group-photo {
-  float: right;
-  margin: 20px;
-}
-
-.group-photo img {
-  border: 3px solid #9B57FF;
-  border-radius: 6px;
-}
-
-/* Student ID list formatting */
-.students > li {
-  list-style: none;
-  padding-left: 0;
+.student-ids {
+  position: absolute;
+  right: 20px;
+  top: 150px;
+  width: 25%;
+  background-color: #1a0a2c;
+  border: 2px solid #55237F;
+  padding: 15px;
 }
 
 .student-id-list {
   list-style: none;
   padding: 0;
-  margin-left: 20px;
-  max-width: 400px;
 }
 
 .student-id-list li {
-  padding: 4px 0;
-  font-weight: normal;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .student-id-list .name {
   font-weight: bold;
-  margin-right: 8px;
+  color: #F8EFFE;
 }
 
 .student-id-list .id {
   color: #C987FF;
+  font-family: monospace;
 }
 
-
-/* Optional right alignment of the entire block */
-.students {
-  margin-left: auto;
-  margin-right: 5%;
-  max-width: 450px;
-}
-
-/* Centering table in section */
+/* Table Styling */
 table {
-  margin-left: auto;
-  margin-right: auto;
   width: 80%;
-  background-color: #1a0a2c; /* Example deep purple */
+  margin: 0 auto;
   border-collapse: collapse;
+  background-color: #1a0a2c;
+  border: 2px solid #55237F;
 }
 
-th {
+table caption {
   font-weight: bold;
-  background-color: #2e004d;
+  margin-bottom: 10px;
+  color: #C987FF;
 }
 
-td {
-  background-color: #1f0133;
+table th {
+  background-color: #2E0059;
+  color: #F8EFFE;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
 }
 
-/* Hover effect for table cells */
-td:hover {
-  background-color: #3d176e;
-  transition: background-color 0.3s ease;
+table td {
+  padding: 10px;
+  border: 1px solid #55237F;
+  background-color: #210B35;
 }
+
+table tr:hover td {
+  background-color: #361665;
+}
+
+/* Group Photo Styling */
+.group-photo {
+  float: right;
+  margin: 0 0 20px 20px;
+  border: 2px solid #55237F;
+  padding: 10px;
+  background-color: #1a0a2c;
+}
+
+.group-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.group-photo figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Definition List Styling */
+.contributions dt {
+  font-weight: bold;
+  color: #C987FF;
+  margin-top: 10px;
+}
+
+.contributions dd {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+
+/* Boxed section styling for jobs.html */
+section, aside {
+  background-color: #1a0a2c;             
+  border: 2px solid #55237F;             
+  border-radius: 0;                   
+  padding: 20px;
+  margin-bottom: 30px;                   
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
