@@ -218,15 +218,13 @@ body {
 }
 
 
-
-
 /* About Page Specific Styles */
 .info-box {
   background-color: #1a0a2c;
   border: 2px solid #55237F;
   padding: 20px;
   margin-bottom: 30px;
-  width: 70%; /* Leaves space for student IDs */
+  width: 70%; /* Leaves space for student ids */
 }
 
 .student-ids {
