@@ -335,3 +335,18 @@ section, aside {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 
+/* positions footer on index page at bottom of screen */
+#index-footer {
+  position: fixed;
+  bottom: 0;
+  margin-left: 15%;
+  width: 85%;
+  clear: none;
+}
+
+#index-footer a {
+  color: #C987FF;
+}
+#index-footer a:visited {
+  color: #C987FF;
+}
