@@ -53,7 +53,7 @@
     text-align: center;
 }
 
-/* CSS-only runaway button effect using checkbox hack */
+/* Runaway button effect using checkbox hack */
 .accept-checkbox {
     display: none;
 }
