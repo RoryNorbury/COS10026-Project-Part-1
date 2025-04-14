@@ -401,8 +401,6 @@
     display: none;
 }
 
-/* When the animation finishes (progress bar reaches 100%), 
-   trigger the flip animation by checking the checkbox */
    #upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
     display: none;
 }
@@ -556,7 +554,7 @@ footer {
     animation: shine 3s infinite;
 }
 
-/* This is a critical update - make button disabled until valid */
+/* Make button disabled until valid */
 #upload-form:invalid .upload-button {
     opacity: 0.5;
     pointer-events: none;
@@ -567,7 +565,7 @@ footer {
     pointer-events: auto;
 }
 
-/* Fix the checkbox selector to target form elements correctly */
+
 #upload-form .consent-checkbox:required:not(:checked) + label {
     color: #ff6b6b;
 }
@@ -578,7 +576,6 @@ footer {
     display: none;
 }
 
-/* When the form is submitted, we'll check this checkbox via JavaScript to trigger transition */
 #upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
     display: none;
 }
