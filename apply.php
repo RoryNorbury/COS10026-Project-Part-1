@@ -16,20 +16,20 @@
 		<img src="images/logo.PNG" alt="company logo">
 		<a href="index.html">Home Page</a>
 		<a href="jobs.html">Open Job Positions</a>
-		<a href="apply.html" class="current">Apply for a Job</a>
+		<a href="apply.php" class="current">Apply for a Job</a>
 		<a href="about.html">About Us</a>
 		<a href="upload.html">Upload Consciousness</a>
 	  </nav>
 	  
 	<div id="main-container">
 		<h1>Job Application</h1>
-		<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+		<form action="process_eoi.php" method="post" novalidate="novalidate">
 			<!-- Dropdown to select which job to apply for -->
 			<label for="job_selection">Select job listing</label>
 			<select id="job_selection" name="job_selection" required>
 				<option value="">Choose a position</option>
-				<option value="job1">Data Analyst</option>
-				<option value="job2">Transition Technician</option>
+				<option value="MM26C">Data Analyst (MM26C)</option>
+				<option value="MM00C">Transition Technician (MM00C)</option>
 			</select><br>
 			<!-- Personal details -->
 			<fieldset>
@@ -47,13 +47,16 @@
 					required>
 				<!-- Radio options for Applicant's gender -->
 				<p>Gender:
-					<input type="radio" id="male" name="gender" required>
+					<input type="radio" id="male" name="gender" value="Male" required>
 					<label for="male">Male</label>
-					<input type="radio" id="female" name="gender">
+
+					<input type="radio" id="female" name="gender" value="Female">
 					<label for="female">Female</label>
-					<input type="radio" id="other" name="gender">
+
+					<input type="radio" id="other" name="gender" value="Other">
 					<label for="other">Other</label>
-					<input type="radio" id="undisclosed" name="gender">
+
+					<input type="radio" id="undisclosed" name="gender" value="Undisclosed">
 					<label for="undisclosed">Prefer not to say</label>
 				</p>
 			</fieldset>
@@ -68,17 +71,17 @@
 				<label for="state">State: </label>
 				<select id="state" name="state" required>
 					<option value="">Choose state</option>
-					<option value="vic">VIC</option>
-					<option value="nsw">NSW</option>
-					<option value="qld">QLD</option>
-					<option value="nt">NT</option>
-					<option value="wa">WA</option>
-					<option value="sa">SA</option>
-					<option value="tas">TAS</option>
-					<option value="act">ACT</option>
+					<option value="VIC">VIC</option>
+					<option value="NSW">NSW</option>
+					<option value="QLD">QLD</option>
+					<option value="NT">NT</option>
+					<option value="WA">WA</option>
+					<option value="SA">SA</option>
+					<option value="TAS">TAS</option>
+					<option value="ACT">ACT</option>
 				</select> <br>
 				<label for="postcode">Postcode</label>
-				<input type="text" id="postcode" name="postcode" pattern="[\d]{4}" required><br>
+				<input type="text" id="postcode" name="postcode" pattern="[\d]{4}" maxlength="4" required><br>
 			</fieldset>
 			<!-- Applicant's contact information -->
 			<fieldset>
@@ -92,14 +95,14 @@
 			<fieldset>
 				<legend>Technical skills</legend>
 				<label for="skill1">Basic Networking Understanding</label>
-				<input type="checkbox" id="skill1" name="skill1" required><br>
+				<input type="checkbox" id="skill1" name="skill1" value="1"><br>
 				<label for="skill2">Awareness of Privacy Protocols</label>
-				<input type="checkbox" id="skill2" name="skill2" required><br>
+				<input type="checkbox" id="skill2" name="skill2" value="1"><br>
 				<label for="skill3">Cloud Platforms Familiarity</label>
-				<input type="checkbox" id="skill3" name="skill3" required><br>
+				<input type="checkbox" id="skill3" name="skill3" value="1"><br>
 				<!-- space for applicant to fill in any other relevant skills -->
 				<label for="other_skills">Other skills: </label>
-				<textarea id="other_skills" name="other_skills" rows="5"></textarea><br>
+				<textarea id="other_skills" name="other_skills" rows="5" placeholder="Describe any other relevant skills you possess..."></textarea><br>
 				<!-- Button to submit application -->
 				<input type="submit" id="submit" name="submit" value="Apply">
 			</fieldset>
