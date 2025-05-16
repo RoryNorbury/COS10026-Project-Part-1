@@ -189,7 +189,7 @@ if (!empty($errors)) {
     // use prepared statements to prevent SQL injection
     $stmt = mysqli_prepare($conn, "INSERT INTO eoi (JobReferenceNumber, FirstName, LastName, DateOfBirth, Gender, StreetAddress, SuburbTown, State, Postcode, EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, OtherSkills, Status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'New')");
     
-    mysqli_stmt_bind_param($stmt, "sssssssssssiisss", 
+    mysqli_stmt_bind_param($stmt, "sssssssssssiiis", 
         $job_ref_num, 
         $first_name, 
         $last_name, 

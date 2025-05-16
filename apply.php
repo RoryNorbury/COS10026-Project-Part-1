@@ -23,7 +23,7 @@
 	  
 	<div id="main-container">
 		<h1>Job Application</h1>
-		<form action="http://localhost/COS10026-Project-Part-1/process_eoi.php" method="post" novalidate="novalidate">
+		<form action="http://localhost/COS10026-Project-Part-1/process_eoi.php" method="POST" novalidate="novalidate">
 			<!-- Dropdown to select which job to apply for -->
 			<label for="job_selection">Select job listing</label>
 			<select id="job_selection" name="job_selection" required>
