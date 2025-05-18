@@ -1,3 +1,20 @@
+/*
+Dear reader and teammates, this is in fact sectioned for your convenience.
+i tried making this easy for you.
+here is where each section starts
+styles.css: line 15
+index.css: line 439
+privacy.css: line 725
+terms.css: line 971
+upload.css: line 1119
+good luck.
+in consumptive despair, Renad
+*/
+
+
+/* ==========================================================
+   START OF: styles.css (Global site-wide styling)
+   ========================================================== */
 html,
 body {
   height: 100%;
@@ -412,6 +429,1305 @@ input[type="date"] {
   border-radius: 8px;
 }
 
+/* ========================================================
+   END OF: styles.css
+   ======================================================== */
 
 
 
+
+   /* ==========================================================
+   START OF: index.css (Homepage specific animations and UI)
+   ========================================================== */
+
+
+   /* Homepage specific animations */
+.terminal-container {
+  background-color: #0a0a0a;
+  border: 2px solid #55237F;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(155, 87, 255, 0.5);
+  overflow: hidden;
+}
+
+.terminal-text {
+  color: #C987FF;
+  font-family: monospace;
+  margin: 0;
+  font-size: 1.2em;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #C987FF;
+  animation: typing 8s steps(70) 1s forwards, blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #C987FF }
+}
+
+.section-container {
+  background-color: #1a0a2c;
+  border: 2px solid #55237F;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.progress-container {
+  background-color: #0D001B;
+  border: 1px solid #9B57FF;
+  height: 30px;
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 34.7%;
+  background: linear-gradient(90deg, #361665, #C987FF);
+  animation: pulse 2s infinite;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #F8EFFE;
+  font-weight: bold;
+}
+
+.status-text {
+  color: #C987FF;
+  font-style: italic;
+  text-align: right;
+  margin-top: 5px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Floating digital souls */
+.digital-soul {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,135,255,1) 0%, rgba(155,87,255,0.3) 70%, rgba(155,87,255,0) 100%);
+  box-shadow: 0 0 15px rgba(201, 135, 255, 0.7);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#soul1 { top: 20%; left: 30%; animation: float 15s ease-in-out infinite, glow 4s alternate infinite; }
+#soul2 { top: 70%; left: 70%; animation: float 20s ease-in-out infinite, glow 6s alternate infinite; }
+#soul3 { top: 40%; left: 60%; animation: float 12s ease-in-out infinite, glow 5s alternate infinite; }
+#soul4 { top: 60%; left: 20%; animation: float 18s ease-in-out infinite, glow 7s alternate infinite; }
+#soul5 { top: 30%; left: 80%; animation: float 14s ease-in-out infinite, glow 3s alternate infinite; }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-20px) translateX(10px); }
+  50% { transform: translateY(0) translateX(20px); }
+  75% { transform: translateY(20px) translateX(10px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(201, 135, 255, 0.7); }
+  to { box-shadow: 0 0 20px rgba(201, 135, 255, 1); }
+}
+
+/* Glitch effect */
+.glitch-container {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.glitch {
+  color: #C987FF;
+  font-size: 3em;
+  position: relative;
+  margin: 0 auto;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.glitch::before, .glitch::after {
+  content: "UPLOAD YOUR SOUL TODAY";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip-path: inset(44% 0 56% 0);
+  animation: glitch-anim-1 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: 2px 0 #00ffff;
+  clip-path: inset(67% 0 43% 0);
+  animation: glitch-anim-2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip-path: inset(20% 0 80% 0); }
+  20% { clip-path: inset(60% 0 1% 0); }
+  40% { clip-path: inset(25% 0 58% 0); }
+  60% { clip-path: inset(10% 0 75% 0); }
+  80% { clip-path: inset(53% 0 41% 0); }
+  100% { clip-path: inset(73% 0 7% 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(25% 0 58% 0); }
+  20% { clip-path: inset(73% 0 7% 0); }
+  40% { clip-path: inset(20% 0 80% 0); }
+  60% { clip-path: inset(10% 0 75% 0); }
+  80% { clip-path: inset(53% 0 41% 0); }
+  100% { clip-path: inset(60% 0 1% 0); }
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(0deg); }
+  10% { transform: skew(0deg); }
+  11% { transform: skew(0.5deg); }
+  20% { transform: skew(0deg); }
+  30% { transform: skew(0deg); }
+  40% { transform: skew(-0.5deg); }
+  50% { transform: skew(-1deg); }
+  60% { transform: skew(0deg); }
+  70% { transform: skew(0deg); }
+  80% { transform: skew(0.5deg); }
+  90% { transform: skew(0deg); }
+  100% { transform: skew(0deg); }
+}
+
+/* Glow effect for headings */
+h3 {
+  color: #C987FF;
+  text-shadow: 0 0 5px rgba(201, 135, 255, 0.5),
+         0 0 10px rgba(201, 135, 255, 0.3);
+  animation: neon 1.5s ease-in-out infinite alternate;
+  position: relative;
+}
+
+h3:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  animation: random-glitch 10s infinite;
+}
+
+@keyframes random-glitch {
+  0%, 100% { background-color: transparent; }
+  5%, 5.1% { background-color: rgba(255, 0, 193, 0.1); }
+  25%, 25.1% { background-color: transparent; }
+  50%, 50.1% { background-color: rgba(0, 255, 255, 0.1); transform: skew(10deg); }
+  50.2% { background-color: transparent; transform: skew(0); }
+  85%, 85.1% { background-color: rgba(255, 0, 193, 0.1); }
+}
+
+@keyframes neon {
+  from { text-shadow: 0 0 5px rgba(201, 135, 255, 0.5), 0 0 10px rgba(201, 135, 255, 0.3); }
+  to { text-shadow: 0 0 10px rgba(201, 135, 255, 0.5), 0 0 20px rgba(201, 135, 255, 0.3), 0 0 30px rgba(201, 135, 255, 0.2); }
+}
+
+.product-question{
+text-align: center;
+}
+
+
+.upload-button {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 15px 0;
+  background: linear-gradient(45deg, #361665, #C987FF);
+  color: #F8EFFE;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(201, 135, 255, 0.7);
+}
+
+.upload-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+.tech-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(87, 177, 255, 0.3);
+  background-color: rgba(22, 75, 101, 0.5);
+}
+
+/* ========================================================
+   END OF: index.css
+   ======================================================== */
+
+
+
+
+/* ==========================================================
+  START OF: privacy.css (Privacy page specific styling)
+  ========================================================== */
+
+/* Privacy page specific styling */
+.privacy-container {
+  background-color: #1a0a2c;
+  border: 2px solid #55237F;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 20px 0;
+  line-height: 1.6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background surveillance animation */
+.privacy-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+      radial-gradient(circle, transparent 50%, rgba(201, 135, 255, 0.03) 100%),
+      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(201, 135, 255, 0.05) 10px, rgba(201, 135, 255, 0.05) 20px);
+  opacity: 0.3;
+  z-index: -1;
+  animation: scan 15s linear infinite;
+}
+
+@keyframes scan {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+}
+
+.privacy-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Notification using :target pseudo-class */
+.tracking-notice {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: rgba(21, 0, 51, 0.9);
+  border: 1px solid #55237F;
+  padding: 10px 15px;
+  font-size: 0.8em;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(155, 87, 255, 0.5);
+  z-index: 100;
+  animation: pulse-notice 2s infinite;
+  max-width: 300px;
+}
+
+
+@keyframes pulse-notice {
+  0%, 100% { box-shadow: 0 0 10px rgba(155, 87, 255, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(155, 87, 255, 0.8); }
+}
+
+/* When the "opt-out" anchor is clicked */
+#opt-out:target .tracking-notice {
+  content: "Opt-out request received. We will continue monitoring you but pretend not to.";
+  animation: fade-out 3s forwards 2s;
+}
+
+#opt-out:target .opt-out-btn {
+  display: none;
+}
+
+#opt-out:target .opt-out-message {
+  display: block;
+}
+
+.opt-out-message {
+  display: none;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+.privacy-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #55237F;
+}
+
+.privacy-title {
+  color: #C987FF;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.privacy-title::before {
+  content: "🐱";
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #55237F;
+}
+
+.data-table th {
+  background-color: #2E0059;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: rgba(46, 0, 89, 0.3);
+}
+
+.blinking-text {
+  animation: blink-text 1s infinite;
+}
+
+@keyframes blink-text {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.highlighted {
+  background-color: rgba(201, 135, 255, 0.2);
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Multiple watching eyes around the page */
+.watching-eye {
+  position: absolute;
+  font-size: 1.5em;
+  opacity: 0.3;
+  z-index: 1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.eye1 { top: 100px; right: 50px; }
+.eye2 { top: 300px; left: 30px; }
+.eye3 { top: 500px; right: 80px; }
+.eye4 { top: 700px; left: 60px; }
+
+/* Eyes light up when nearby content is hovered */
+.privacy-section:nth-child(2):hover ~ .eye1 {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.privacy-section:nth-child(3):hover ~ .eye2 {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.privacy-section:nth-child(4):hover ~ .eye3 {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.privacy-section:nth-child(5):hover ~ .eye4 {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.opt-out-btn {
+  background-color: #8E55FF;
+  color: #0D001B;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.opt-out-btn:hover {
+  background-color: #7647D4;
+  transform: translateY(-2px);
+}
+
+/* Text highlighting animation for different paragraphs */
+.privacy-section p {
+  position: relative;
+}
+
+.privacy-section p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(201, 135, 255, 0.2);
+  opacity: 0;
+}
+
+.privacy-section:nth-child(2) p::after {
+  animation: highlight-text 15s infinite 1s;
+}
+
+.privacy-section:nth-child(3) p::after {
+  animation: highlight-text 15s infinite 4s;
+}
+
+.privacy-section:nth-child(4) p::after {
+  animation: highlight-text 15s infinite 7s;
+}
+
+.privacy-section:nth-child(5) p::after {
+  animation: highlight-text 15s infinite 10s;
+}
+
+@keyframes highlight-text {
+  0%, 90%, 100% { opacity: 0; }
+  3%, 10% { opacity: 1; }
+}
+
+.hidden-message {
+  color: transparent;
+  font-size: 0.1px;
+  position: absolute;
+  left: -9999px;
+}
+
+/* ========================================================
+   END OF: privacy.css
+   ======================================================== */
+
+
+
+
+/* ==========================================================
+   START OF: terms.css (Terms and Conditions Page Styles)
+   ========================================================== */
+
+/* Terms page specific styling */
+.legal-container {
+  background-color: #1a0a2c;
+  border: 2px solid #55237F;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.legal-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.legal-section {
+  margin-bottom: 20px;
+}
+
+.legal-title {
+  color: #C987FF;
+  border-bottom: 1px solid #55237F;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.redacted {
+  background-color: #000;
+  color: #000;
+  padding: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.redacted:hover {
+  background-color: transparent;
+  color: #ff0000;
+}
+
+.warning {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.fine-print {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+.signature-area {
+  border: 1px dashed #55237F;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Runaway button effect using checkbox hack */
+.accept-checkbox {
+  display: none;
+}
+
+.accept-btn {
+  display: inline-block;
+  background-color: #8E55FF;
+  color: #0D001B;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+  position: relative;
+}
+
+.accept-btn-container {
+  position: relative;
+  height: 80px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* Button runs away on hover */
+.accept-btn-container:hover .accept-btn {
+  transform: translateY(-100px);
+}
+
+/* Alternative positions to move to */
+.accept-btn-container:hover:nth-child(odd) .accept-btn {
+  transform: translateX(100px);
+}
+
+/* After hovering, show a message */
+.accept-btn-container:hover::after {
+  content: "Cannot escape your destiny...";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ff0066;
+  font-style: italic;
+}
+
+/* When checkbox is checked (meaning they somehow clicked the button) */
+.accept-checkbox:checked ~ .accept-message {
+  display: block;
+}
+
+.accept-message {
+  display: none;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #361665;
+  color: #F8EFFE;
+  text-align: center;
+  animation: pulse-bg 2s infinite;
+}
+
+@keyframes pulse-bg {
+  0%, 100% { background-color: #361665; }
+  50% { background-color: #55237F; }
+}
+
+.footnote {
+  font-size: 0.7em;
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.emphasis {
+  font-style: italic;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+/* ==========================================================
+   END OF: terms.css
+   ========================================================== */
+
+
+
+
+/* ==========================================================
+   START OF: upload.css (Upload Page Specific Styles)
+   ========================================================== */
+
+
+/* Upload page specific styling */
+
+.upload-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.warning-box {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff6b6b;
+  padding: 15px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.warning-box::before {
+  content: "⚠️";
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+
+.warning-box p {
+  margin-left: 50px;
+  color: #ff6b6b;
+}
+
+
+/* Upload Process Steps */
+.upload-process {
+  counter-reset: step;
+  margin: 40px 0;
+}
+
+.step {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 70px;
+}
+
+.step::before {
+  counter-increment: step;
+  content: "Step " counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #361665, #C987FF);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(155, 87, 255, 0.5);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 15px rgba(155, 87, 255, 0.5); }
+  to { box-shadow: 0 0 25px rgba(155, 87, 255, 0.8); }
+}
+
+.step h3 {
+  margin-top: 0;
+  color: #C987FF;
+}
+
+
+/* Brain Scan Visualization */
+/* Neural network animation for HTM State */
+.brain-scan, .neural-network {
+  height: 200px;
+  background-color: #0D001B;
+  border: 1px solid #55237F;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, transparent, #C987FF, transparent);
+  animation: scan-line 3s infinite;
+  z-index: 2;
+}
+
+.brain-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+      radial-gradient(#C987FF 1px, transparent 1px),
+      radial-gradient(#C987FF 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  opacity: 0.3;
+  animation: pulse-grid 4s infinite alternate;
+}
+
+@keyframes scan-line {
+  0% { top: 0; opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0.8; }
+}
+
+@keyframes pulse-grid {
+  0% { opacity: 0.2; background-size: 20px 20px; }
+  50% { opacity: 0.4; background-size: 25px 25px; }
+  100% { opacity: 0.2; background-size: 20px 20px; }
+}
+
+
+
+.neuron-grid {
+  position: absolute;
+  inset: 0;
+  background: 
+      linear-gradient(90deg, rgba(201,135,255,0.1) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(201,135,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-pulse 3s infinite;
+}
+
+.neuron-grid::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+      radial-gradient(circle at 20% 30%, rgba(201,135,255,0.8) 0%, rgba(201,135,255,0) 50%),
+      radial-gradient(circle at 80% 20%, rgba(201,135,255,0.6) 0%, rgba(201,135,255,0) 50%),
+      radial-gradient(circle at 40% 70%, rgba(201,135,255,0.7) 0%, rgba(201,135,255,0) 50%),
+      radial-gradient(circle at 60% 50%, rgba(201,135,255,0.4) 0%, rgba(201,135,255,0) 50%);
+  animation: neuron-pulse 5s infinite alternate;
+}
+
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes neuron-pulse {
+  0% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 0.5; transform: scale(1); }
+}
+
+
+
+/* Digital soul extraction animation */
+.soul-extraction {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.human-silhouette {
+  width: 50px;
+  height: 100px;
+  background-color: #C987FF;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100"><circle cx="25" cy="25" r="15"/><rect x="15" y="40" width="20" height="60" rx="5"/></svg>');
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100"><circle cx="25" cy="25" r="15"/><rect x="15" y="40" width="20" height="60" rx="5"/></svg>');
+  position: absolute;
+  left: 0;
+}
+
+.soul-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.soul-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #C987FF;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.soul-particle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: soul-extract 3s infinite 0.1s;
+}
+
+.soul-particle:nth-child(2) {
+  top: 30%;
+  left: 30%;
+  animation: soul-extract 3s infinite 0.3s;
+}
+
+.soul-particle:nth-child(3) {
+  top: 40%;
+  left: 20%;
+  animation: soul-extract 3s infinite 0.5s;
+}
+
+.soul-particle:nth-child(4) {
+  top: 50%;
+  left: 30%;
+  animation: soul-extract 3s infinite 0.7s;
+}
+
+.soul-particle:nth-child(5) {
+  top: 60%;
+  left: 20%;
+  animation: soul-extract 3s infinite 0.9s;
+}
+
+@keyframes soul-extract {
+  0% { 
+      opacity: 0;
+      transform: translate(0, 0);
+  }
+  50% { 
+      opacity: 1;
+      transform: translate(40px, -10px);
+  }
+  100% { 
+      opacity: 0;
+      transform: translate(80px, 0);
+  }
+}
+
+
+
+/* Upload Progress Bar */
+.progress-container {
+  margin: 30px 0;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #0D001B;
+  border: 1px solid #55237F;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-value {
+  height: 100%;
+  background: linear-gradient(90deg, #361665, #C987FF);
+  width: 0;
+  animation: progress 20s linear forwards;
+}
+
+@keyframes progress {
+  0% { width: 0; }
+  20% { width: 20%; }
+  40% { width: 30%; }
+  60% { width: 50%; }
+  80% { width: 70%; }
+  90% { width: 90%; }
+  100% { width: 100%; }
+}
+
+
+/* Terminal effect */
+.terminal {
+  background-color: #0a0a0a;
+  border: 1px solid #55237F;
+  border-radius: 5px;
+  padding: 15px;
+  font-family: monospace;
+  margin: 20px 0;
+  color: #C987FF;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #C987FF;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  from, to { background-color: transparent; }
+  50% { background-color: #C987FF; }
+}
+
+
+/* Typewriter effect for status messages */
+.status-message {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #C987FF;
+  padding-right: 5px;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+
+.upload-complete-side .warning-box {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff6b6b;
+  padding: 15px 15px 15px 60px; 
+  margin: 20px 0;
+  position: relative;
+}
+
+.upload-complete-side .warning-box::before {
+  content: "⚠️";
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+
+
+
+
+
+/* Once progress is complete, show the complete message */
+/* upload complete animation */
+.upload-complete-container {
+  position: relative;
+}
+
+.upload-complete {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(54, 22, 101, 0.5);
+  border: 2px solid #C987FF;
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+.upload-form-side {
+  position: static;
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.upload-complete-side {
+  display: none;
+  background-color: #210B35;
+  border: 2px solid #55237F;
+  padding: 20px;
+  width: 100%;
+  position: static;
+  box-sizing: border-box;
+}
+
+/* When checkbox is checked, show the complete side */
+#upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
+  display: none;
+}
+
+#upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
+  display: block;
+  animation: fade-in 1s forwards;
+}
+
+
+
+/* Checkbox hack to create interactivity */
+#upload-complete-checkbox {
+  display: none;
+}
+
+ #upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
+  display: none;
+}
+
+#upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
+  display: block;
+  animation: fade-in 1s forwards;
+}
+
+
+
+/* Upload form styling */
+.consent-form {
+  margin: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #C987FF;
+}
+
+.consent-checkbox {
+  margin-right: 10px;
+}
+
+.consent-checkbox:invalid + label {
+  color: #ff6b6b;
+}
+
+.upload-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #361665, #C987FF);
+  color: #F8EFFE;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.upload-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(201, 135, 255, 0.7);
+}
+
+.upload-button:focus {
+  outline: 2px solid #C987FF;
+  box-shadow: 0 0 20px rgba(201, 135, 255, 0.7);
+}
+
+.upload-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+
+
+
+/* Form validation style */
+#upload-form input[type="checkbox"]:required:invalid + label {
+  color: #ff6b6b;
+}
+
+/* Hide the checkbox until form is valid */
+#upload-complete-checkbox {
+  display: none;
+}
+
+
+footer {
+  margin-left: 15%;
+  padding: 20px;
+  background-color: #150033;
+  color: #F8EFFE;
+  text-align: center;
+  clear: both;
+  position: relative; 
+  margin-top: 30px;
+  width: 85%;
+  box-sizing: border-box;
+}
+
+/* Ensure the main container pushes the footer down */
+#main-container {
+  min-height: calc(100vh - 80px);
+  margin-left: 15%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Form validation style - make invalid checkboxes have red text */
+.consent-checkbox:invalid + label {
+  color: #ff6b6b;
+}
+
+/* Make sure the button is disabled until form is valid */
+.upload-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #361665, #C987FF);
+  color: #F8EFFE;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(201, 135, 255, 0.7);
+}
+
+.upload-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+/* Make button disabled until valid */
+#upload-form:invalid .upload-button {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#upload-form:valid .upload-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+#upload-form .consent-checkbox:required:not(:checked) + label {
+  color: #ff6b6b;
+}
+
+
+/* This creates the checkbox hack for page transition */
+#upload-complete-checkbox {
+  display: none;
+}
+
+#upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
+  display: none;
+}
+
+#upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
+  display: block;
+  animation: fade-in 1s forwards;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.button-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+#upload-complete-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ==========================================================
+   END OF: upload.css
+   ========================================================== */
