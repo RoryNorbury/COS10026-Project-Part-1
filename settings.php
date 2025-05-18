@@ -1,7 +1,7 @@
 <?php
 // Database connection settings
-$host = "localhost"; 
-$user = "admin"; 
-$pswd = "meowmeowinc2025!"; 
+$host = "localhost";
+$user = "root";
+$pswd = "";
 $dbnm = "meowmeows_db";
 ?>

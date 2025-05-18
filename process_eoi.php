@@ -1,5 +1,8 @@
 <?php
 session_start(); // start the session to potentially store messages if redirecting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 
 // sanitise input
 function sanitise_input($data) {
@@ -11,7 +14,7 @@ function sanitise_input($data) {
 
 // prevent direct URL access, only allow POST requests
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: apply.php"); // redirect to the application form
+    header("Location: project1/apply.php"); // redirect to the application form
     exit();
 }
 
@@ -27,7 +30,7 @@ if (!$conn) {
     echo "<div id='main-container' style='padding: 20px; text-align: center;'><h1>Database Connection Error</h1>";
     echo "<p>We are experiencing technical difficulties. Please try again later.</p>";
     echo "<p><em>Error details (for debugging): " . mysqli_connect_error() . " (Code: " . mysqli_connect_errno() . ")</em></p>";
-    echo "<a href='apply.php'>Back to Application Form</a>";
+    echo "<p><a href='project1/apply.php'>Go back to the Application Form</a></p>";
     echo "</div></body></html>";
     exit();
 }
@@ -58,7 +61,7 @@ if (!mysqli_query($conn, $create_table_sql)) {
     echo "<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>Error</title><link rel='stylesheet' href='styles/styles.css'></head><body>";
     echo "<div id='main-container' style='padding: 20px; text-align: center;'><h1>Table Creation Error</h1>";
     echo "<p>Could not create EOI table: " . mysqli_error($conn) . "</p>";
-    echo "<a href='apply.php'>Back to Application Form</a>";
+    echo "<p><a href='project1/apply.php'>Back to Application Form</a></p>";
     echo "</div></body></html>";
     mysqli_close($conn);
     exit();
@@ -96,14 +99,15 @@ if (empty($last_name)) {
 $dob = isset($_POST['dob']) ? sanitise_input($_POST['dob']) : '';
 if (empty($dob)) {
     $errors[] = "Date of Birth is required.";
-} elseif (!preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) {
-    $errors[] = "Date of Birth must be in dd/mm/yyyy format.";
+} elseif (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $dob)) {
+    $errors[] = "Date of Birth must be in yyyy-mm-dd format.";
 } else {
-    list($d, $m, $y) = explode('/', $dob);
+    list($y, $m, $d) = explode('-', $dob);
     if (!checkdate((int)$m, (int)$d, (int)$y)) {
-        $errors[] = "Invalid Date of Birth (e.g., 31/02/2000 is not a valid date).";
+        $errors[] = "Invalid Date of Birth (e.g., 2025-02-30 is not a valid date).";
     }
 }
+
 
 
 // gender
@@ -165,9 +169,10 @@ if (empty($phone)) {
 }
 
 // skills
-$skill1 = isset($_POST['skill1']) ? 1 : 0; // Boolean: 1 for true, 0 for false
-$skill2 = isset($_POST['skill2']) ? 1 : 0;
-$skill3 = isset($_POST['skill3']) ? 1 : 0;
+$skills = $_POST['skills'] ?? [];
+$skill1 = in_array("Basic Networking Understanding", $skills) ? 1 : 0;
+$skill2 = in_array("Awareness of Privacy Protocols", $skills) ? 1 : 0;
+$skill3 = in_array("Cloud Platforms Familiarity", $skills) ? 1 : 0;
 
 // other skills (optional)
 $other_skills = isset($_POST['other_skills']) ? sanitise_input($_POST['other_skills']) : '';
@@ -182,7 +187,7 @@ if (!empty($errors)) {
         echo "<li>" . htmlspecialchars($error) . "</li>";
     }
     echo "</ul>";
-    echo "<p><a href='apply.php'>Go back to the Application Form</a></p>";
+    echo "<p><a href='project1/apply.php'>Go back to the Application Form</a></p>";
     echo "</div></body></html>";
 } else {
     // no errors, proceed to insert data into the database
@@ -213,7 +218,7 @@ if (!empty($errors)) {
         echo "<div id='main-container' style='padding: 20px; text-align: center;'><h1>Application Submitted Successfully!</h1>";
         echo "<p>Thank you for your application, " . htmlspecialchars($first_name) . ".</p>";
         echo "<p>Your Expression of Interest (EOI) number is: <strong>" . $eoi_number . "</strong></p>";
-        echo "<p><a href='index.html'>Return to Home Page</a></p>";
+        echo "<p><a href='project1/index.php'>Return to Home Page</a></p>";
         echo "</div></body></html>";
     } else {
         // database insertion error
@@ -221,7 +226,7 @@ if (!empty($errors)) {
         echo "<div id='main-container' style='padding: 20px; text-align: center;'><h1>Database Submission Error</h1>";
         echo "<p>We encountered an error while processing your application. Please try again later.</p>";
         echo "<p><em>Error details (for debugging): " . mysqli_error($conn) . "</em></p>";
-        echo "<a href='apply.php'>Back to Application Form</a>";
+        echo "<p><a href='project1/index.php'>Return to Home Page</a></p>";
         echo "</div></body></html>";
     }
     mysqli_stmt_close($stmt);
