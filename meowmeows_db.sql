@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 16, 2025 at 02:36 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: May 18, 2025 at 04:58 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -53,7 +53,8 @@ CREATE TABLE `eoi` (
 --
 
 INSERT INTO `eoi` (`EOInumber`, `JobReferenceNumber`, `FirstName`, `LastName`, `DateOfBirth`, `Gender`, `StreetAddress`, `SuburbTown`, `State`, `Postcode`, `EmailAddress`, `PhoneNumber`, `Skill1`, `Skill2`, `Skill3`, `OtherSkills`, `Status`, `ApplicationTimestamp`) VALUES
-(1, 'MM26C', 'Oscar', 'Schmidt', '20/08/2005', 'Male', '14 test street', 'melbourne', 'VIC', '3000', 'meowmeows@test.com', '0401000000', 1, 0, 1, 'Rahhhhh', 'New', '2025-05-16 00:34:12');
+(1, 'MM26C', 'Oscar', 'Schmidt', '20/08/2005', 'Male', '14 test street', 'melbourne', 'VIC', '3000', 'meowmeows@test.com', '0401000000', 1, 0, 1, 'Rahhhhh', 'New', '2025-05-16 00:34:12'),
+(2, 'MM00C', 'Rory', 'Norbury', '01/01/2000', 'Male', '12 Test Street', 'Melbourne', 'VIC', '3000', 'meowmeows@test.com', '0481000000', 1, 1, 1, 'No conscience', 'New', '2025-05-18 02:57:28');
 
 --
 -- Indexes for dumped tables
@@ -73,7 +74,7 @@ ALTER TABLE `eoi`
 -- AUTO_INCREMENT for table `eoi`
 --
 ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
