@@ -6,7 +6,6 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
-<body>
 	<img src="images/Background.PNG" class="background-logo" alt="Background Logo">
 	
 	<!-- Floating digital souls -->

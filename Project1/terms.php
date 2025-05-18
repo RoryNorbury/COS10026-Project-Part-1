@@ -5,8 +5,7 @@ $metaKeywords = "terms, conditions, legal, soul contract";
 include 'header.inc';
 include 'nav.inc';
 ?>
-
-<body> 
+ 
     <div id="main-container">
         <div class="legal-container">
             <div class="legal-header">

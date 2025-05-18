@@ -6,7 +6,6 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
-<body>
     <div id="main-container">
         <h1>About Us</h1>
 

@@ -6,8 +6,6 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
-
-<body>
 	<!-- Main content container, offset by nav bar -->
     <div id="main-container">
         <h1>Current Job Openings</h1>
