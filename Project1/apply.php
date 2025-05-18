@@ -7,16 +7,6 @@ include 'nav.inc';
 ?>
 
 <body>
-	<!-- Menu bar -->
-	<nav>
-		<img src="images/logo.PNG" alt="company logo">
-		<a href="index.html">Home Page</a>
-		<a href="jobs.html">Open Job Positions</a>
-		<a href="apply.php" class="current">Apply for a Job</a>
-		<a href="about.html">About Us</a>
-		<a href="upload.html">Upload Consciousness</a>
-	</nav>
-	  
 	<div id="main-container">
 		<h1>Job Application</h1>
 		<form action="http://localhost/COS10026-Project-Part-1/process_eoi.php" method="POST" novalidate="novalidate">

@@ -8,16 +8,6 @@ include 'nav.inc';
 
 
 <body>
-    <!-- Menu bar -->
-    <nav>
-        <img src="images/logo.PNG" alt="company logo">
-        <a href="index.html">Home Page</a>
-        <a href="jobs.html">Open Job Positions</a>
-        <a href="apply.php">Apply for a Job</a>
-        <a href="about.html">About Us</a>
-        <a href="upload.html">Upload Consciousness</a>
-    </nav>
-    
     <div id="main-container">
         <div class="privacy-container">
             <div class="privacy-header">

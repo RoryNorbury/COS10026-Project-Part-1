@@ -7,16 +7,6 @@ include 'nav.inc';
 ?>
 
 <body>
-    <!-- Navigation -->
-    <nav>
-        <img src="images/logo.PNG" alt="company logo">
-        <a href="index.html">Home Page</a>
-        <a href="jobs.html">Open Job Positions</a>
-        <a href="apply.php">Apply for a Job</a>
-        <a href="about.html" class="current">About Us</a>
-        <a href="upload.html">Upload Consciousness</a>
-    </nav>
-
     <div id="main-container">
         <h1>About Us</h1>
 

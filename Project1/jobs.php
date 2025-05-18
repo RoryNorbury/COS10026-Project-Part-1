@@ -8,18 +8,6 @@ include 'nav.inc';
 
 
 <body>
-    <!-- Menu bar -->
-    <nav>
-		<!-- Company logo image -->
-        <img src="images/logo.PNG" alt="company logo">
-		<!-- Navigation links -->
-        <a href="index.html">Home Page</a>
-        <a href="jobs.html" class="current">Open Job Positions</a>
-        <a href="apply.php">Apply for a Job</a>
-        <a href="about.html">About Us</a>
-        <a href="upload.html">Upload Consciousness</a>
-    </nav>
-
 	<!-- Main content container, offset by nav bar -->
     <div id="main-container">
         <h1>Current Job Openings</h1>
