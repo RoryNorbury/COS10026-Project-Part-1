@@ -220,24 +220,25 @@ body {
 
 
 /* About Page Specific Styles */
+/* General content boxes */
 .info-box {
   background-color: #1a0a2c;
   border: 2px solid #55237F;
   padding: 20px;
+  margin: 30px 0;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Right-aligned standalone section */
+.standalone-right {
+  width: 400px;
+  max-width: 90%;
+  margin-left: auto;
   margin-bottom: 30px;
-  width: 70%; /* Leaves space for student ids */
 }
 
-.student-ids {
-  position: absolute;
-  right: 20px;
-  top: 150px;
-  width: 25%;
-  background-color: #1a0a2c;
-  border: 2px solid #55237F;
-  padding: 15px;
-}
-
+/* Student ID list styling */
 .student-id-list {
   list-style: none;
   padding: 0;
@@ -259,7 +260,54 @@ body {
   font-family: monospace;
 }
 
-/* Table Styling */
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .standalone-right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .student-id-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* Group Photo */
+.group-photo {
+  float: right;
+  margin: 0 0 20px 20px;
+  border: 2px solid #55237F;
+  padding: 10px;
+  background-color: #1a0a2c;
+}
+
+.group-photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.group-photo figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Contributions section */
+.contributions dt {
+  font-weight: bold;
+  color: #C987FF;
+  margin-top: 10px;
+}
+
+.contributions dd {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+/* Interests table */
 table {
   width: 80%;
   margin: 0 auto;
@@ -290,39 +338,6 @@ table td {
 
 table tr:hover td {
   background-color: #361665;
-}
-
-/* Group Photo Styling */
-.group-photo {
-  float: right;
-  margin: 0 0 20px 20px;
-  border: 2px solid #55237F;
-  padding: 10px;
-  background-color: #1a0a2c;
-}
-
-.group-photo img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.group-photo figcaption {
-  text-align: center;
-  margin-top: 10px;
-  font-style: italic;
-}
-
-/* Definition List Styling */
-.contributions dt {
-  font-weight: bold;
-  color: #C987FF;
-  margin-top: 10px;
-}
-
-.contributions dd {
-  margin-left: 20px;
-  margin-bottom: 15px;
 }
 
 
@@ -396,4 +411,7 @@ input[type="date"] {
   font-family: inherit;
   border-radius: 8px;
 }
+
+
+
 
