@@ -351,3 +351,19 @@ section, aside {
 #index-footer a:visited {
   color: #C987FF;
 }
+
+
+
+/*Positioning layout jobs.html*/
+.job-aside {
+  background-color: #1b0b2f;
+  color: #eee;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 1px solid #c77dff; 
+  box-shadow: none; 
+  border-radius: 0;
+}
+
+
+
