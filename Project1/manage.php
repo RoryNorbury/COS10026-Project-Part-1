@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (empty($_SESSION['admin_logged_in'])) {
+    header('Location: login.php');
+    exit;
+}
+
 $pageTitle = "Manage Job Applications";
 $metaDescription = "Admin - Manage Job Applications";
 $metaKeywords = "job, application, query, sql, manage";
