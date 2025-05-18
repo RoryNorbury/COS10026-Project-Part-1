@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$pageTitle = "Open Job Positions";
+$metaDescription = "Explore open job positions at Meow Meows";
+$metaKeywords = "Jobs, Careers, Meow Meows, Tech, Consciousness Upload";
+include 'header.inc';
+include 'nav.inc';
+?>
 
-<head>
-	<!-- basic meta data -->
-    <meta charset="utf-8">
-    <meta name="description" content="Explore open job positions at Meow Meows">
-    <meta name="keywords" content="Jobs, Careers, Meow Meows, Tech, Consciousness Upload">
-    <meta name="author" content="Meow Meows HR">
-	<!-- Title of the webpage shown in browser tab -->
-    <title>Open Job Positions</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
 
 <body>
     <!-- Menu bar -->
@@ -135,11 +130,4 @@
     </div>
 
 	<!-- Footer with basic site links -->
-	<footer>
-		<p>&copy; 2025 Meow Meows Inc. All rights reserved. | Bringing digital purr-fection to life.</p>
-		<a href="terms.html">Terms & Conditions</a> 
-		<a href="privacy.html">Privacy Policy</a> 
-	</footer>
-
-</body>
-</html>
+    <?php include 'footer.inc'; ?>

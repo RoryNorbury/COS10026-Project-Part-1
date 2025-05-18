@@ -3,6 +3,6 @@
     <a href="index.php">Home Page</a>
     <a href="jobs.php">Open Job Positions</a>
     <a href="apply.php">Apply for a Job</a>
-    <a href="about.php" class="current">About Us</a>
+    <a href="about.php">About Us</a>
     <a href="upload.php">Upload Consciousness</a>
 </nav>

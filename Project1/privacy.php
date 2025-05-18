@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$pageTitle = "Privacy Policy";
+$metaDescription = "Privacy Policy for consciousness upload services";
+$metaKeywords = "privacy, policy, data collection, soul";
+include 'header.inc';
+include 'nav.inc';
+?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Privacy Policy for consciousness upload services">
-    <meta name="keywords" content="privacy, policy, data collection, soul">
-    <meta name="author" content="Meow Meows Inc.">
-    <title>Privacy Policy</title>
-    <link rel="stylesheet" href="styles/styles.css">
-
-</head>
 
 <body>
     <!-- Menu bar -->
@@ -161,7 +157,9 @@
 		<a href="terms.html">Terms & Conditions</a> 
 		<a href="privacy.html">Privacy Policy</a> 
 	</footer>
-    
+
+    <?php include 'footer.inc'; ?>
+
     <div class="watching-eye eye1">👁️</div>
     <div class="watching-eye eye2">👁️</div>
     <div class="watching-eye eye3">👁️</div>

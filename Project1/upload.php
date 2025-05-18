@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Upload your consciousness to Meow Meows servers">
-    <meta name="keywords" content="consciousness upload, digital immortality, soul transfer">
-    <meta name="author" content="Meow Meows Inc.">
-    <title>Upload Your Consciousness</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+<?php
+$pageTitle = "Upload Your Consciousness";
+$metaDescription = "Upload your consciousness to Meow Meows servers";
+$metaKeywords = "consciousness upload, digital immortality, soul transfer";
+include 'header.inc';
+include 'nav.inc';
+?>
 
 <body>
 	<!-- Menu bar -->
@@ -174,10 +170,4 @@
     </div>
  
 
-	<footer>
-		<p>&copy; 2025 Meow Meows Inc. All rights reserved. | Bringing digital purr-fection to life.</p>
-		<a href="terms.html">Terms & Conditions</a> 
-		<a href="privacy.html">Privacy Policy</a> 
-	</footer>
-</body>
-</html>
+    <?php include 'footer.inc'; ?>

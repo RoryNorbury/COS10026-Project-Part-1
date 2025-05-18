@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="Meow Meows - Upload your consciousness to our secure servers">
-	<meta name="keywords" content="consciousness upload, digital afterlife, immortality">
-	<meta name="author" content="Meow Meows Inc.">
-	<title>Meow Meows - Your Digital Afterlife</title>
-	<link rel="stylesheet" href="styles/styles.css">
-</head>
+<?php
+$pageTitle = "Meow Meows - Your Digital Afterlife";
+$metaDescription = "Meow Meows - Upload your consciousness to our secure servers";
+$metaKeywords = "consciousness upload, digital afterlife, immortality";
+include 'header.inc';
+include 'nav.inc';
+?>
 
 <body>
 	<!-- Menu bar -->
@@ -121,12 +117,4 @@
 		</div>
 	</div>
 	
-	<footer>
-		<p>&copy; 2025 Meow Meows Inc. All rights reserved. | Bringing digital purr-fection to life.</p>
-		<a href="terms.html">Terms & Conditions</a> 
-		<a href="privacy.html">Privacy Policy</a> 
-		<p><a href="https://github.com/RoryNorbury/COS10026-Project-Part-1">Project Github Repository</a></p>
-	</footer>
-
-</body>
-</html>
+	<?php include 'footer.inc'; ?>

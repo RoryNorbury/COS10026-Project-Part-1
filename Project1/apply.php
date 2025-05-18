@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="Job Application">
-	<meta name="keywords" content="job, Application, apply, data, Technician">
-	<meta name="author" content="Meow Meows HR">
-	<title>Apply for a Job</title>
-	<link rel="stylesheet" href="styles/styles.css">
-</head>
+<?php
+$pageTitle = "Apply for a Job";
+$metaDescription = "Job Application";
+$metaKeywords = "job, Application, apply, data, Technician";
+include 'header.inc';
+include 'nav.inc';
+?>
 
 <body>
 	<!-- Menu bar -->
@@ -112,10 +108,4 @@
 		</form>
 	</div>
 
-	<footer>
-		<p>&copy; 2025 Meow Meows Inc. All rights reserved. | Bringing digital purr-fection to life.</p>
-		<a href="terms.html">Terms & Conditions</a> 
-		<a href="privacy.html">Privacy Policy</a> 
-	</footer>
-</body>
-</html>
+	<?php include 'footer.inc'; ?>
