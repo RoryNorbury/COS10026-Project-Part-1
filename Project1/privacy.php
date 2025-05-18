@@ -140,12 +140,6 @@ include 'nav.inc';
         </div>
     </div>
 
-	<footer>
-		<p>&copy; 2025 Meow Meows Inc. All rights reserved. | Bringing digital purr-fection to life.</p>
-		<a href="terms.html">Terms & Conditions</a> 
-		<a href="privacy.html">Privacy Policy</a> 
-	</footer>
-
     <?php include 'footer.inc'; ?>
 
     <div class="watching-eye eye1">👁️</div>
