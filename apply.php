@@ -1,4 +1,4 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,7 +19,7 @@
 		<a href="apply.php" class="current">Apply for a Job</a>
 		<a href="about.html">About Us</a>
 		<a href="upload.html">Upload Consciousness</a>
-	  </nav>
+	</nav>
 	  
 	<div id="main-container">
 		<h1>Job Application</h1>
@@ -31,20 +31,19 @@
 				<option value="MM26C">Data Analyst (MM26C)</option>
 				<option value="MM00C">Transition Technician (MM00C)</option>
 			</select><br>
+
 			<!-- Personal details -->
 			<fieldset>
 				<legend>Personal details</legend>
 				<!-- Applicant's first name -->
 				<label for="first_name">First Name: </label>
-				<input type="text" id="first_name" name="first_name" pattern="[A-Za-z]{1,20}" maxlength="20"
-					required><br>
+				<input type="text" id="first_name" name="first_name" pattern="[A-Za-z]{1,20}" maxlength="20" required><br>
 				<!-- Applicant's last name -->
 				<label for="last_name">Last Name: </label>
 				<input type="text" id="last_name" name="last_name" pattern="[A-Za-z]{1,20}" maxlength="20" required><br>
 				<!-- Applicant's date of birth -->
 				<label for="dob">Date of Birth: </label>
-				<input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="^\d{2}\/\d{2}\/\d{4}$"
-					required>
+				<input type="date" id="dob" name="dob" required>
 				<!-- Radio options for Applicant's gender -->
 				<p>Gender:
 					<input type="radio" id="male" name="gender" value="Male" required>
@@ -60,12 +59,12 @@
 					<label for="undisclosed">Prefer not to say</label>
 				</p>
 			</fieldset>
+
 			<!-- Applicant's address -->
 			<fieldset>
 				<legend>Your address</legend>
 				<label for="address">Street Address: </label>
-				<input type="text" name="address" id="address" placeholder="14 Smith Street" pattern=".{1,40}"
-					maxlength="40" required><br>
+				<input type="text" name="address" id="address" placeholder="14 Smith Street" pattern=".{1,40}" maxlength="40" required><br>
 				<label for="suburb">Suburb/Town: </label>
 				<input type="text" name="suburb" id="suburb" pattern=".{1,40}" maxlength="40" required><br>
 				<label for="state">State: </label>
@@ -83,6 +82,7 @@
 				<label for="postcode">Postcode</label>
 				<input type="text" id="postcode" name="postcode" pattern="[\d]{4}" maxlength="4" required><br>
 			</fieldset>
+
 			<!-- Applicant's contact information -->
 			<fieldset>
 				<legend>Contact Information</legend>
@@ -91,23 +91,27 @@
 				<label for="phone">Phone Number: </label>
 				<input type="tel" id="phone" name="phone" pattern="[\d\s]{8,12}" required><br>
 			</fieldset>
+
 			<!-- Checkboxes to indicate the applicant's technical skills -->
-			<fieldset>
-				<legend>Technical skills</legend>
-				<label for="skill1">Basic Networking Understanding</label>
-				<input type="checkbox" id="skill1" name="skill1" value="1"><br>
-				<label for="skill2">Awareness of Privacy Protocols</label>
-				<input type="checkbox" id="skill2" name="skill2" value="1"><br>
-				<label for="skill3">Cloud Platforms Familiarity</label>
-				<input type="checkbox" id="skill3" name="skill3" value="1"><br>
+			<fieldset class="skills-group">
+  				<legend>Technical skills</legend>
+
+  				<div class="checkbox-wrapper">
+    				<label><input type="checkbox" name="skills[]" value="Basic Networking Understanding"> Basic Networking Understanding</label><br>
+    				<label><input type="checkbox" name="skills[]" value="Awareness of Privacy Protocols"> Awareness of Privacy Protocols</label><br>
+    				<label><input type="checkbox" name="skills[]" value="Cloud Platforms Familiarity"> Cloud Platforms Familiarity</label><br>
+  				</div>
+
 				<!-- space for applicant to fill in any other relevant skills -->
-				<label for="other_skills">Other skills: </label>
+				<label for="other_skills">Other skills:</label><br>
 				<textarea id="other_skills" name="other_skills" rows="5" placeholder="Describe any other relevant skills you possess..."></textarea><br>
+
 				<!-- Button to submit application -->
 				<input type="submit" id="submit" name="submit" value="Apply">
 			</fieldset>
 		</form>
 	</div>
+
 	<footer>
 		<p>&copy; 2025 Meow Meows Inc. All rights reserved. | Bringing digital purr-fection to life.</p>
 		<a href="terms.html">Terms & Conditions</a> 
