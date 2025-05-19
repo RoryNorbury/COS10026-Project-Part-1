@@ -48,13 +48,13 @@ include 'nav.inc';
             <h2>Member Contributions</h2>
             <dl class="contributions">
                 <dt>Rory</dt>
-                <dd>Created repository and coded Job Application page</dd>
+                <dd>Created the repository and coded the Job Application page. Additionally, worked on HR Manager Queries and manage EOIs with filters, and created the job descriptions table in MySQL and dynamically generated the job descriptions via PHP.</dd>
                 <dt>Oscar</dt>
-                <dd>Coded Company Information page</dd>
+                <dd>Coded the Company Information page. Additionally, created the EOI table in MySQL and developed the `process_eoi.php` script to add validated records to the EOI table and handle server-side validation.</dd>
                 <dt>Davina</dt>
-                <dd>Website template, styling, and company logo</dd>
+                <dd>Designed the website template, handled styling, and created the company logo. Additionally, worked on updateing the About Us page, including members' contributions, and enhanceing the site, specifically with the 'Other skills' checkbox functionality and form validation.</dd>
                 <dt>Renad</dt>
-                <dd>Coded About Us page and Position Description page</dd>
+                <dd>Coded the About Us page and Position Description page. Additionally, worked on implementing PHP includes for modularizing common elements (header, footer, menu), and created the 'settings.php' file for database connection variables, and resolving previous work errors.</dd>
             </dl>
         </section>
 
