@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2025 at 07:57 AM
+-- Generation Time: May 19, 2025 at 05:25 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,7 +54,8 @@ CREATE TABLE `eoi` (
 
 INSERT INTO `eoi` (`EOInumber`, `JobReferenceNumber`, `FirstName`, `LastName`, `DateOfBirth`, `Gender`, `StreetAddress`, `SuburbTown`, `State`, `Postcode`, `EmailAddress`, `PhoneNumber`, `Skill1`, `Skill2`, `Skill3`, `OtherSkills`, `Status`, `ApplicationTimestamp`) VALUES
 (1, 'MM26C', 'Oscar', 'Schmidt', '20/08/2005', 'Male', '14 test street', 'melbourne', 'VIC', '3000', 'meowmeows@test.com', '0401000000', 1, 0, 1, 'Rahhhhh', 'New', '2025-05-15 14:34:12'),
-(2, 'MM00C', 'Rory', 'Norbury', '01/01/2000', 'Male', '12 Test Street', 'Melbourne', 'VIC', '3000', 'meowmeows@test.com', '0481000000', 1, 1, 1, 'No conscience', 'New', '2025-05-17 16:57:28');
+(2, 'MM00C', 'Rory', 'Norbury', '01/01/2000', 'Male', '12 Test Street', 'Melbourne', 'VIC', '3000', 'meowmeows@test.com', '0481000000', 1, 1, 1, 'No conscience', 'New', '2025-05-17 16:57:28'),
+(4, 'MM00C', 'Silly', 'Goose', '2000-05-14', 'Other', '24 silly street', 'insanity', 'VIC', '3000', 'sillygoose@test.com', '0400000010', 1, 1, 1, 'I am amazing and overqualified and amazing and silly and should get the job', 'New', '2025-05-19 03:23:54');
 
 -- --------------------------------------------------------
 
@@ -154,7 +155,7 @@ ALTER TABLE `job_data`
 -- AUTO_INCREMENT for table `eoi`
 --
 ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `jobs`
