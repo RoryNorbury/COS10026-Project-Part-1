@@ -51,7 +51,6 @@ function results_table($query, $host, $user, $pswd, $dbnm)
             echo "</td></table></div>";
         } else {
             echo "" . mysqli_error($db_conn);
-            mysqli_close($db_conn);
         }
         mysqli_close($db_conn);
     } else {
