@@ -34,13 +34,12 @@ function results_table($query, $host, $user, $pswd, $dbnm)
     if ($db_conn) {
         $result = mysqli_query($db_conn, $query);
         if ($result) {
-            echo "<table style='width:auto'><tr>";
+            echo "<div class='eoi_data_table'><table style='width:auto'><tr>";
             while ($col = mysqli_fetch_field($result)) {
                 $fields[] = $col->name;
-                echo "<th>" . $col->name . "</th>";
+                echo "<th class='no-gradient'>" . $col->name . "</th>";
             }
             echo "</tr>";
-            echo "<br><br>";
             // echo rows
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
@@ -49,7 +48,7 @@ function results_table($query, $host, $user, $pswd, $dbnm)
                 }
                 echo "</tr>";
             }
-            echo "</td></table>";
+            echo "</td></table></div>";
         } else {
             echo "" . mysqli_error($db_conn);
             mysqli_close($db_conn);

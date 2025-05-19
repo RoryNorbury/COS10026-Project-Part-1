@@ -1731,3 +1731,23 @@ footer {
 /* ==========================================================
    END OF: upload.css
    ========================================================== */
+
+
+
+
+/* ==========================================================
+   START OF: upload.css (Upload Page Specific Styles)
+   ========================================================== */
+
+
+/* Manage page specific styling */
+div .eoi_data_table {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.no-gradient {
+  background: #602e95;
+  color: #F8EFFE;
+}
+/* #361665, #C987FF */
