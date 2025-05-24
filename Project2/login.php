@@ -1,13 +1,6 @@
 <?php
-
-// Testing.
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 session_start();
-require_once __DIR__ . '/settings.php';
-
+require_once("settings.php");
 
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,20 +14,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_bind_param($stmt,'s',$id);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_bind_result($stmt,$db_pass);
-        if (mysqli_stmt_fetch($stmt) && $pass === $db_pass) {
+        mysqli_stmt_fetch($stmt);
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
+
+        //Plaintext password check (because your DB has plain passwords)
+        if ($pass === $db_pass) {
             $_SESSION['admin_logged_in'] = true;
-            header('Location: admin_dashboard.php');
+            header('Location: database.php');
             exit;
         } else {
             $error = 'Invalid ID or password';
         }
-        mysqli_stmt_close($stmt);
-        mysqli_close($conn);
     } else {
         $error = 'Cannot connect to database.';
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
