@@ -15,5 +15,9 @@
             Jira Project Board
         </a>
     </p>
-</footer>
+
+    <div style="margin-top:1em; text-align:center;">
+        <a href="login.php" class="admin-login-btn">Admin Login</a>
+    </div>
+</body>
 </html>
