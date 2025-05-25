@@ -99,7 +99,7 @@ include 'nav.inc';
 		 	</h2>
 		</div>
 
-		<a href="upload.html" class="upload-button">BEGIN UPLOAD PROCESS</a>
+		<a href="upload.php" class="upload-button">BEGIN UPLOAD PROCESS</a>
 		
 		<!-- Glitch Title -->
 		<div class="glitch-container">

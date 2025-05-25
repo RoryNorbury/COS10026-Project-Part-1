@@ -1,8 +1,8 @@
 <footer>
     <p>&copy; 2025 Meow Meows Inc. All rights reserved. | Bringing digital purr-fection to life.</p>
 
-    <a href="terms.html">Terms & Conditions</a> 
-    <a href="privacy.html">Privacy Policy</a> 
+    <a href="terms.php">Terms & Conditions</a> 
+    <a href="privacy.php">Privacy Policy</a> 
 
     <!-- Repository and project-management links -->
     <p>
