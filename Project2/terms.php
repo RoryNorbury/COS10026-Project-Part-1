@@ -6,6 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
  
+ <body class="global_style terms_style">
     <div id="main-container">
         <div class="legal-container">
             <div class="legal-header">
@@ -70,5 +71,5 @@ include 'nav.inc';
             </div>
         </div>
     </div>
-
+ </body>
     <?php include 'footer.inc'; ?>

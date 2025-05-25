@@ -7,4 +7,4 @@
     <title><?php echo isset($pageTitle) ? $pageTitle : 'Meow Meows'; ?></title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+

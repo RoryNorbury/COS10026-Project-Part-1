@@ -6,6 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
+<body class="global_style">
     <div id="main-container">
         <h1>About Us</h1>
 
@@ -92,6 +93,6 @@ include 'nav.inc';
             <figcaption>Meow Meows - Innovating with claws and code</figcaption>
         </figure>
     </div>
-
+</body>
     <!-- Footer -->
     <?php include 'footer.inc'; ?>

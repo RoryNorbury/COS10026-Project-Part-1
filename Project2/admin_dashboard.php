@@ -42,7 +42,7 @@ while ($r = mysqli_fetch_row($res)) {
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body class="global_style manage_style">
   <?php include 'nav.inc'; ?>
   <div id="main-container" class="admin-dashboard">
     <h1>🛠️ Admin Dashboard</h1>

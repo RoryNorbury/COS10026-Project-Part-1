@@ -11,6 +11,7 @@ $metaDescription = "Admin - Manage Job Applications";
 $metaKeywords = "job, application, query, sql, manage";
 include 'header.inc';
 include 'nav.inc';
+echo '<body class="global_style manage_style">';
 
 /*
 User actions:

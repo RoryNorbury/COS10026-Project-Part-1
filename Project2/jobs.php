@@ -6,6 +6,8 @@ include 'header.inc';
 include 'nav.inc';
 include_once '../settings.php';
 
+
+
 // returns the umber of positions to display
 function get_job_count()
 {

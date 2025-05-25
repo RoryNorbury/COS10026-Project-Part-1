@@ -6,6 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
+<body class="global_style upload_style">
     <div id="main-container">
         <div class="upload-header">
             <h1>Consciousness Upload Portal</h1>
@@ -157,6 +158,6 @@ include 'nav.inc';
                 </div>
         </div>
     </div>
- 
+</body>
 
     <?php include 'footer.inc'; ?>
