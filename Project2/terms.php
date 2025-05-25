@@ -6,7 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
  
- <body class="global_style terms_style">
+ <body class="global_style terms_style manage_style">
     <div id="main-container">
         <div class="legal-container">
             <div class="legal-header">

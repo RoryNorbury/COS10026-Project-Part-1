@@ -6,7 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
-<body class="global_style upload_style">
+<body class="global_style upload_style manage_style">
     <div id="main-container">
         <div class="upload-header">
             <h1>Consciousness Upload Portal</h1>

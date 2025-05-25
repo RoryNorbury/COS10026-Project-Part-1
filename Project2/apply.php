@@ -6,7 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
-<body class="global_style">
+<body class="global_style manage_style">
 	<div id="main-container">
 		<h1>Job Application</h1>
 		<form action="http://localhost/COS10026-Project-Part-1/project2/process_eoi.php" method="POST">

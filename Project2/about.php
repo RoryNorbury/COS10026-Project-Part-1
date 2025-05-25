@@ -6,7 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
-<body class="global_style">
+<body class="global_style manage_style">
     <div id="main-container">
         <h1>About Us</h1>
 

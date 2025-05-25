@@ -116,7 +116,7 @@ function get_job_listing($job_id)
 }
 ?>
 
-<body class="global_style">
+<body class="global_style manage_style">
 <!-- Main content container, offset by nav bar -->
 <div id="main-container">
     <h1>Current Job Openings</h1>

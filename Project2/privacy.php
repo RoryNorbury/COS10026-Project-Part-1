@@ -6,7 +6,7 @@ include 'header.inc';
 include 'nav.inc';
 ?>
 
-<body class="global_style privacy_style">
+<body class="global_style privacy_style manage_style">
     <div id="main-container">
         <div class="privacy-container">
             <div class="privacy-header">

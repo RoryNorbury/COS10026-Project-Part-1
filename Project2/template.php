@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="global_style">
+<body class="global_style manage_style">
 	<!-- Menu bar -->
 	<nav>
 		<img src="images/logo.PNG" alt="company logo">
