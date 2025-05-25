@@ -3,11 +3,11 @@ Dear reader and teammates, this is in fact sectioned for your convenience.
 i tried making this easy for you.
 here is where each section starts
 styles.css: line 15
-index.css: line 460
-privacy.css: line 773
-terms.css: line 1033
-upload.css: line 1197
-manage.css: 1804
+index.css: line 475
+privacy.css: line 788
+terms.css: line 1048
+upload.css: line 1212
+manage.css: 1819
 good luck.
 in consumptive despair, Renad
 */
@@ -448,6 +448,21 @@ in consumptive despair, Renad
   padding: 0.5rem;
   font-family: inherit;
   border-radius: 8px;
+}
+
+/* mobile nav */
+@media screen and (max-width: 600px) {
+  .global_style nav a {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    padding: 4px;
+    text-align: center;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* match nav box height */
+  }
 }
 
 /* ========================================================

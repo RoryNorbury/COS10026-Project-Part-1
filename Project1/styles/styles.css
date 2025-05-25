@@ -450,6 +450,21 @@ in consumptive despair, Renad
   border-radius: 8px;
 }
 
+/* === MOBILE NAVIGATION TEXT FIX === */
+@media screen and (max-width: 600px) {
+  .global_style nav a {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    padding: 4px;
+    text-align: center;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* match nav box height */
+  }
+}
+
 /* ========================================================
   END OF: styles.css
 ======================================================== */
@@ -762,7 +777,7 @@ in consumptive despair, Renad
   background-color: rgba(22, 75, 101, 0.5);
 }
 
-   
+
 /* ========================================================
   END OF: index.css
 ======================================================== */
