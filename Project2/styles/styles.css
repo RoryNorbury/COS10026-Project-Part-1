@@ -3,242 +3,268 @@ Dear reader and teammates, this is in fact sectioned for your convenience.
 i tried making this easy for you.
 here is where each section starts
 styles.css: line 15
-index.css: line 439
-privacy.css: line 725
-terms.css: line 971
-upload.css: line 1119
+index.css: line 460
+privacy.css: line 773
+terms.css: line 1033
+upload.css: line 1197
+manage.css: 1804
 good luck.
 in consumptive despair, Renad
 */
 
-
 /* ==========================================================
    START OF: styles.css (Global site-wide styling)
    ========================================================== */
-html,
-body {
+/* Scoped reset for global_style */
+.global_style {
+  display: block;
+  background-color: #0D001B; /* dark background */
+  color: #F8EFFE;            /* light text color */
+  font-family: "Poppins", sans-serif;
+}
+
+.global_style *,
+.global_style *::before,
+.global_style *::after {
+  box-sizing: border-box;
+}
+
+
+.global_style html,
+.global_style body {
   height: 100%;
   margin: 0;
 }
 
-nav {
+.global_style nav {
   /* Flexbox layout */
-    display: flex; 
-    /* Arranges nav to vertical column */
-    flex-direction: column;
-    /* Aligns the flex items */
-    justify-content: flex-start;
-    position: fixed;
-    height: 100%;
-    width: 15%;
-    border: 2px solid #9B57FF;
+  display: flex;
+  /* Arranges nav to vertical column */
+  flex-direction: column;
+  /* Aligns the flex items */
+  justify-content: flex-start;
+  position: fixed;
+  height: 100%;
+  width: 15%;
+  border: 2px solid #9B57FF;
 }
 
-nav a {
-    border: 1px solid #9B57FF;
-    display: block;
-    padding: 20px;
+.global_style nav a {
+  border: 1px solid #9B57FF;
+  display: block;
+  padding: 20px;
 }
 
-nav a:hover {
-    background-color: #361665;
-}
+/* (continues...) */
 
-nav a:hover {
+.global_style a:hover {
+  background-color: #361665;
+  }
+   
+.global_style a:hover {
   /* enlarges the link */
   transform: scale(1.05); 
   /* Adds a shadow */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-}
-/* end of testing */
-nav a:link {
-    color: inherit;
-    /* Removes the default underline styling */
-    text-decoration: none;
-}
-nav a:visited {
-    color: inherit;
-    text-decoration: none;
-}
-
-#main-container {
-    margin-left: 15%;
-    padding: 20px;
-}
-
-/* organizing Member Contributions in about us*/
-dl.contributions {
-  /* Converts the container into a grid layout */
-    display: grid;
-    /* Creates two column */
-    grid-template-columns: max-content auto; 
-    /* vertical gap 0.5em and horizontal gap 1em */
-    gap: 0.5em 1em;
   }
-/* table for about us*/
-table, th, td {
-    border: 1px solid #2E0059;
-    /* Merges adjacent borders into a single border */
-    border-collapse: collapse;
-    padding: 8px;
-}
-caption {
-    font-weight: bold;
-    margin-bottom: 0.5em;
+
+/* end of testing */
+.global_style nav a:link {
+  color: inherit;
+  /* Removes the default underline styling */
+  text-decoration: none;
 }
 
-html, body {
-    font-family: "Poppins", sans-serif; 
-    /* Applies a dark background */
-    background: #0D001B;
-    color: #F8EFFE;                    /* light text color */
-}
-  
-nav {
-    background-color: #150033;
-    border-color: #9B57FF;  
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5);
-}
-  
-nav a {
-    color: #F3E7FF;       
-    border-color: #9B57FF;
-    background-color: transparent;
-    /* animates any changes in background color over 0.3 seconds */
-    transition: background-color 0.3s ease;
-}
-  
-nav a:hover {
-    background-color: #361665;
+.global_style nav a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
-h1 {
-    color: #C987FF;
+.global_style #main-container {
+  margin-left: 15%;
+  padding: 20px;
 }
-  
-p, li, dd, td {
-    color: #F8EFFE;
+
+/* organizing Member Contributions in about us */
+.global_style dl.contributions {
+  /* Converts the container into a grid layout */
+  display: grid;
+  /* Creates two column */
+  grid-template-columns: max-content auto; 
+  /* vertical gap 0.5em and horizontal gap 1em */
+  gap: 0.5em 1em;
 }
-  
-caption {
-    color: #C987FF;
+
+/* table for about us */
+.global_style table,
+.global_style th,
+.global_style td {
+  border: 1px solid #2E0059;
+  /* Merges adjacent borders into a single border */
+  border-collapse: collapse;
+  padding: 8px;
 }
-  
-img {
-    border-radius: 6px;
+
+.global_style caption {
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
-  
-figcaption {
-    color: #F8EFFE;
-    font-style: italic;
+
+.global_style html,
+.global_style body {
+  font-family: "Poppins", sans-serif;
+  /* Applies a dark background */
+  background: #0D001B;
+  color: #F8EFFE; /* light text color */
 }
-  
-fieldset {
-    border: 2px solid #A881FF;
-    margin-bottom: 20px;
-    background-color: #210B35; /* subtle cosmic background */
+
+.global_style nav {
+  background-color: #150033;
+  border-color: #9B57FF;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5);
 }
-legend {
-    color: #C8A6FF;
-    font-weight: bold;
+
+.global_style nav a {
+  color: #F3E7FF;
+  border-color: #9B57FF;
+  background-color: transparent;
+  /* animates any changes in background color over 0.3 seconds */
+  transition: background-color 0.3s ease;
 }
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    background-color: #19012A;
-    color: #ffffff;
-    border: 1px solid #55237F;
-    /* thin border with rounded corners */
-    border-radius: 4px;
-    padding: 8px;
-    margin-bottom: 10px;
+
+.global_style nav a:hover {
+  background-color: #361665;
 }
-  
+
+.global_style h1 {
+  color: #C987FF;
+}
+
+.global_style p,
+.global_style li,
+.global_style dd,
+.global_style td {
+  color: #F8EFFE;
+}
+
+.global_style caption {
+  color: #C987FF;
+}
+
+.global_style img {
+  border-radius: 6px;
+}
+
+.global_style figcaption {
+  color: #F8EFFE;
+  font-style: italic;
+}
+    
+.global_style fieldset {
+  border: 2px solid #A881FF;
+  margin-bottom: 20px;
+  background-color: #210B35; /* subtle cosmic background */
+}
+
+.global_style legend {
+  color: #C8A6FF;
+  font-weight: bold;
+}
+
+.global_style input[type="text"],
+.global_style input[type="number"],
+.global_style input[type="email"],
+.global_style input[type="tel"],
+.global_style select,
+.global_style textarea {
+  background-color: #19012A;
+  color: #ffffff;
+  border: 1px solid #55237F;
+  /* thin border with rounded corners */
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
 /* Submit button style */
-input[type="submit"] {
-    background-color: #8E55FF;
-    border: none;
-    color: #0D001B;
-    padding: 10px 20px;
-    /* Changes the cursor to a pointer to signal */
-    cursor: pointer; 
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-input[type="submit"]:hover {
-    background-color: #7647D4;
+.global_style input[type="submit"] {
+  background-color: #8E55FF;
+  border: none;
+  color: #0D001B;
+  padding: 10px 20px;
+  /* Changes the cursor to a pointer to signal */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-nav {
-    background-color: #000000;
-    border-color: #9B57FF;
-    box-shadow: 2px 0 6px rgba(77, 52, 52, 0.5);
+.global_style input[type="submit"]:hover {
+  background-color: #7647D4;
+}
+
+.global_style nav {
+  background-color: #000000;
+  border-color: #9B57FF;
+  box-shadow: 2px 0 6px rgba(77, 52, 52, 0.5);
 }
 
 /* footer margins to avoid clashing with sidebar */
-footer {
-    margin-left: 15%;
-    padding: 20px;
-    background-color: #150033;
-    color: #F8EFFE;
-    text-align: center;
-    clear: both;
+.global_style footer {
+  margin-left: 15%;
+  padding: 20px;
+  background-color: #150033;
+  color: #F8EFFE;
+  text-align: center;
+  clear: both;
 }
 
-html {
+.global_style html {
   /* smooth scrolling */
   scroll-behavior: smooth;
 }
 
 /* Table enhancements */
-table {
+.global_style table {
   width: 100%;
   background-color: rgba(21, 0, 51, 0.6);
 }
 
-th {
+.global_style th {
   background: linear-gradient(to right, #361665, #C987FF);
   color: #F8EFFE;
 }
 
-tr:nth-child(even) {
+.global_style tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Styles for the active/current navigation link */
-nav a.current {
-  background-color: #8E55FF; 
+.global_style nav a.current {
+  background-color: #8E55FF;
   color: #0D001B;
   font-weight: bold;
   border-color: #9B57FF;
 }
 
-body {
+.global_style body {
   /* Sets the body to a relative positioning contex */
   position: relative;
 }
 
-body {
+.global_style body {
   position: relative; /* Ensures the ::before is positioned relative to <body> */
   margin: 0;
-
 }
 
-
-
-.background-logo {
+.global_style .background-logo {
   position: fixed;          /* Keeps it fixed on the screen */
   width: 600px;             /* Adjust to your desired size */
   pointer-events: none;     /* Allows clicks through the image */
 }
 
-
 /* About Page Specific Styles */
 /* General content boxes */
-.info-box {
+.global_style .info-box {
   background-color: #1a0a2c;
   border: 2px solid #55237F;
   padding: 20px;
@@ -248,7 +274,7 @@ body {
 }
 
 /* Right-aligned standalone section */
-.standalone-right {
+.global_style .standalone-right {
   width: 400px;
   max-width: 90%;
   margin-left: auto;
@@ -256,43 +282,42 @@ body {
 }
 
 /* Student ID list styling */
-.student-id-list {
+.global_style .student-id-list {
   list-style: none;
   padding: 0;
 }
 
-.student-id-list li {
+.global_style .student-id-list li {
   padding: 8px 0;
   display: flex;
   justify-content: space-between;
 }
 
-.student-id-list .name {
+.global_style .student-id-list .name {
   font-weight: bold;
   color: #F8EFFE;
 }
 
-.student-id-list .id {
+.global_style .student-id-list .id {
   color: #C987FF;
   font-family: monospace;
 }
 
 /* Responsive behavior */
 @media (max-width: 768px) {
-  .standalone-right {
+  .global_style .standalone-right {
     width: 100%;
     margin-left: 0;
   }
 
-  .student-id-list li {
+  .global_style .student-id-list li {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
   }
 }
-
 /* Group Photo */
-.group-photo {
+.global_style .group-photo {
   float: right;
   margin: 0 0 20px 20px;
   border: 2px solid #55237F;
@@ -300,32 +325,32 @@ body {
   background-color: #1a0a2c;
 }
 
-.group-photo img {
+.global_style .group-photo img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.group-photo figcaption {
+.global_style .group-photo figcaption {
   text-align: center;
   margin-top: 10px;
   font-style: italic;
 }
 
 /* Contributions section */
-.contributions dt {
+.global_style .contributions dt {
   font-weight: bold;
   color: #C987FF;
   margin-top: 10px;
 }
 
-.contributions dd {
+.global_style .contributions dd {
   margin-left: 20px;
   margin-bottom: 15px;
 }
 
 /* Interests table */
-table {
+.global_style table {
   width: 80%;
   margin: 0 auto;
   border-collapse: collapse;
@@ -333,13 +358,13 @@ table {
   border: 2px solid #55237F;
 }
 
-table caption {
+.global_style table caption {
   font-weight: bold;
   margin-bottom: 10px;
   color: #C987FF;
 }
 
-table th {
+.global_style table th {
   background-color: #2E0059;
   color: #F8EFFE;
   padding: 12px;
@@ -347,29 +372,30 @@ table th {
   font-weight: bold;
 }
 
-table td {
+   
+.global_style table td {
   padding: 10px;
   border: 1px solid #55237F;
   background-color: #210B35;
 }
 
-table tr:hover td {
+.global_style table tr:hover td {
   background-color: #361665;
 }
 
-
 /* Boxed section styling for jobs.html */
-section, aside {
-  background-color: #1a0a2c;             
-  border: 2px solid #55237F;             
-  border-radius: 0;                   
+.global_style section,
+.global_style aside {
+  background-color: #1a0a2c;
+  border: 2px solid #55237F;
+  border-radius: 0;
   padding: 20px;
-  margin-bottom: 30px;                   
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* positions footer on index page at bottom of screen */
-#index-footer {
+.global_style #index-footer {
   position: fixed;
   bottom: 0;
   margin-left: 15%;
@@ -377,30 +403,27 @@ section, aside {
   clear: none;
 }
 
-#index-footer a {
-  color: #C987FF;
-}
-#index-footer a:visited {
+.global_style #index-footer a {
   color: #C987FF;
 }
 
+.global_style #index-footer a:visited {
+  color: #C987FF;
+}
 
-
-/*Positioning layout jobs.html*/
-.job-aside {
+/* Positioning layout jobs.html */
+.global_style .job-aside {
   background-color: #1b0b2f;
   color: #eee;
   padding: 1.5rem;
   margin-top: 2rem;
-  border: 1px solid #55237F; 
-  box-shadow: none; 
+  border: 1px solid #55237F;
+  box-shadow: none;
   border-radius: 0;
 }
 
-
-
 /* Styling for apply checkboxes and date picker */
-input[type="submit"] {
+.global_style input[type="submit"] {
   background-color: #9d4edd;
   color: #0f021c;
   padding: 0.75rem 2rem;
@@ -414,35 +437,46 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+.global_style input[type="submit"]:hover {
   background-color: #c77dff;
 }
 
-
-
-input[type="date"] {
+.global_style input[type="date"] {
   background-color: #1b0b2f; /* dark background */
   color: #eee;               /* light text */
-  border: 1px solid #55237F; 
+  border: 1px solid #55237F;
   padding: 0.5rem;
   font-family: inherit;
   border-radius: 8px;
 }
 
 /* ========================================================
-   END OF: styles.css
-   ======================================================== */
+  END OF: styles.css
+======================================================== */
+   
+   
+   
+   
+/* ==========================================================
+  START OF: index.css (Homepage specific animations and UI)
+========================================================== */
 
+/* Scoped reset for index_style */
+.index_style {
+  display: block;
+  background-color: #0D001B; /* dark background */
+  color: #F8EFFE;            /* light text color */
+  font-family: "Poppins", sans-serif;
+}
 
+.index_style *,
+.index_style *::before,
+.index_style *::after {
+  box-sizing: border-box;
+}
 
-
-   /* ==========================================================
-   START OF: index.css (Homepage specific animations and UI)
-   ========================================================== */
-
-
-   /* Homepage specific animations */
-.terminal-container {
+/* Homepage specific animations */
+.index_style .terminal-container {
   background-color: #0a0a0a;
   border: 2px solid #55237F;
   border-radius: 6px;
@@ -452,7 +486,7 @@ input[type="date"] {
   overflow: hidden;
 }
 
-.terminal-text {
+.index_style .terminal-text {
   color: #C987FF;
   font-family: monospace;
   margin: 0;
@@ -474,7 +508,7 @@ input[type="date"] {
   50% { border-color: #C987FF }
 }
 
-.section-container {
+.index_style .section-container {
   background-color: #1a0a2c;
   border: 2px solid #55237F;
   border-radius: 6px;
@@ -482,7 +516,7 @@ input[type="date"] {
   margin: 20px 0;
 }
 
-.progress-container {
+.index_style .progress-container {
   background-color: #0D001B;
   border: 1px solid #9B57FF;
   height: 30px;
@@ -491,14 +525,14 @@ input[type="date"] {
   margin: 15px 0;
 }
 
-.progress-bar {
+.index_style .progress-bar {
   height: 100%;
   width: 34.7%;
   background: linear-gradient(90deg, #361665, #C987FF);
   animation: pulse 2s infinite;
 }
 
-.percentage {
+.index_style .percentage {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -508,7 +542,7 @@ input[type="date"] {
   font-weight: bold;
 }
 
-.status-text {
+.index_style .status-text {
   color: #C987FF;
   font-style: italic;
   text-align: right;
@@ -521,7 +555,7 @@ input[type="date"] {
 }
 
 /* Floating digital souls */
-.digital-soul {
+.index_style .digital-soul {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -533,11 +567,11 @@ input[type="date"] {
   z-index: 1;
 }
 
-#soul1 { top: 20%; left: 30%; animation: float 15s ease-in-out infinite, glow 4s alternate infinite; }
-#soul2 { top: 70%; left: 70%; animation: float 20s ease-in-out infinite, glow 6s alternate infinite; }
-#soul3 { top: 40%; left: 60%; animation: float 12s ease-in-out infinite, glow 5s alternate infinite; }
-#soul4 { top: 60%; left: 20%; animation: float 18s ease-in-out infinite, glow 7s alternate infinite; }
-#soul5 { top: 30%; left: 80%; animation: float 14s ease-in-out infinite, glow 3s alternate infinite; }
+.index_style #soul1 { top: 20%; left: 30%; animation: float 15s ease-in-out infinite, glow 4s alternate infinite; }
+.index_style #soul2 { top: 70%; left: 70%; animation: float 20s ease-in-out infinite, glow 6s alternate infinite; }
+.index_style #soul3 { top: 40%; left: 60%; animation: float 12s ease-in-out infinite, glow 5s alternate infinite; }
+.index_style #soul4 { top: 60%; left: 20%; animation: float 18s ease-in-out infinite, glow 7s alternate infinite; }
+.index_style #soul5 { top: 30%; left: 80%; animation: float 14s ease-in-out infinite, glow 3s alternate infinite; }
 
 @keyframes float {
   0% { transform: translateY(0) translateX(0); }
@@ -553,12 +587,12 @@ input[type="date"] {
 }
 
 /* Glitch effect */
-.glitch-container {
+.index_style .glitch-container {
   text-align: center;
   margin: 50px 0;
 }
 
-.glitch {
+.index_style .glitch {
   color: #C987FF;
   font-size: 3em;
   position: relative;
@@ -566,7 +600,8 @@ input[type="date"] {
   animation: glitch-skew 1s infinite linear alternate-reverse;
 }
 
-.glitch::before, .glitch::after {
+.index_style .glitch::before,
+.index_style .glitch::after {
   content: "UPLOAD YOUR SOUL TODAY";
   position: absolute;
   top: 0;
@@ -575,14 +610,14 @@ input[type="date"] {
   height: 100%;
 }
 
-.glitch::before {
+.index_style .glitch::before {
   left: 2px;
   text-shadow: -2px 0 #ff00c1;
   clip-path: inset(44% 0 56% 0);
   animation: glitch-anim-1 5s infinite linear alternate-reverse;
 }
 
-.glitch::after {
+.index_style .glitch::after {
   left: -2px;
   text-shadow: 2px 0 #00ffff;
   clip-path: inset(67% 0 43% 0);
@@ -623,15 +658,15 @@ input[type="date"] {
 }
 
 /* Glow effect for headings */
-h3 {
+.index_style h3 {
   color: #C987FF;
   text-shadow: 0 0 5px rgba(201, 135, 255, 0.5),
-         0 0 10px rgba(201, 135, 255, 0.3);
+               0 0 10px rgba(201, 135, 255, 0.3);
   animation: neon 1.5s ease-in-out infinite alternate;
   position: relative;
 }
 
-h3:nth-child(odd)::before {
+.index_style h3:nth-child(odd)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -646,22 +681,34 @@ h3:nth-child(odd)::before {
   0%, 100% { background-color: transparent; }
   5%, 5.1% { background-color: rgba(255, 0, 193, 0.1); }
   25%, 25.1% { background-color: transparent; }
-  50%, 50.1% { background-color: rgba(0, 255, 255, 0.1); transform: skew(10deg); }
-  50.2% { background-color: transparent; transform: skew(0); }
+  50%, 50.1% {
+    background-color: rgba(0, 255, 255, 0.1);
+    transform: skew(10deg);
+  }
+  50.2% {
+    background-color: transparent;
+    transform: skew(0);
+  }
   85%, 85.1% { background-color: rgba(255, 0, 193, 0.1); }
 }
 
 @keyframes neon {
-  from { text-shadow: 0 0 5px rgba(201, 135, 255, 0.5), 0 0 10px rgba(201, 135, 255, 0.3); }
-  to { text-shadow: 0 0 10px rgba(201, 135, 255, 0.5), 0 0 20px rgba(201, 135, 255, 0.3), 0 0 30px rgba(201, 135, 255, 0.2); }
+  from {
+    text-shadow: 0 0 5px rgba(201, 135, 255, 0.5),
+                 0 0 10px rgba(201, 135, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(201, 135, 255, 0.5),
+                 0 0 20px rgba(201, 135, 255, 0.3),
+                 0 0 30px rgba(201, 135, 255, 0.2);
+  }
 }
 
-.product-question{
-text-align: center;
+.index_style .product-question {
+  text-align: center;
 }
 
-
-.upload-button {
+.index_style .upload-button {
   display: block;
   width: 80%;
   max-width: 400px;
@@ -681,12 +728,12 @@ text-align: center;
   overflow: hidden;
 }
 
-.upload-button:hover {
+.index_style .upload-button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(201, 135, 255, 0.7);
 }
 
-.upload-button::before {
+.index_style .upload-button::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -703,31 +750,47 @@ text-align: center;
   100% { left: 150%; }
 }
 
-.tech-item {
+.index_style .tech-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 10px;
   border-radius: 5px;
 }
 
-.tech-item:hover {
+.index_style .tech-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(87, 177, 255, 0.3);
   background-color: rgba(22, 75, 101, 0.5);
 }
 
+   
 /* ========================================================
-   END OF: index.css
-   ======================================================== */
-
-
-
-
+  END OF: index.css
+======================================================== */
+   
+   
+   
+   
 /* ==========================================================
   START OF: privacy.css (Privacy page specific styling)
-  ========================================================== */
+========================================================== */
+  
+/* Scoped reset for privacy_style */
+.privacy_style {
+  display: block;
+  background-color: #0D001B; /* dark background */
+  color: #F8EFFE;            /* light text color */
+  font-family: "Poppins", sans-serif;
+}
+
+.privacy_style *,
+.privacy_style *::before,
+.privacy_style *::after {
+  box-sizing: border-box;
+}
+
 
 /* Privacy page specific styling */
-.privacy-container {
+.privacy_style .privacy-container {
   background-color: #1a0a2c;
   border: 2px solid #55237F;
   border-radius: 6px;
@@ -739,7 +802,7 @@ text-align: center;
 }
 
 /* Background surveillance animation */
-.privacy-container::before {
+.privacy_style .privacy-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -759,14 +822,14 @@ text-align: center;
   50% { background-position: 100% 100%; }
 }
 
-.privacy-header {
+.privacy_style .privacy-header {
   text-align: center;
   margin-bottom: 30px;
   position: relative;
 }
 
 /* Notification using :target pseudo-class */
-.tracking-notice {
+.privacy_style .tracking-notice {
   position: fixed;
   bottom: 70px;
   right: 20px;
@@ -781,27 +844,26 @@ text-align: center;
   max-width: 300px;
 }
 
-
 @keyframes pulse-notice {
   0%, 100% { box-shadow: 0 0 10px rgba(155, 87, 255, 0.5); }
   50% { box-shadow: 0 0 20px rgba(155, 87, 255, 0.8); }
 }
 
 /* When the "opt-out" anchor is clicked */
-#opt-out:target .tracking-notice {
+.privacy_style #opt-out:target .tracking-notice {
   content: "Opt-out request received. We will continue monitoring you but pretend not to.";
   animation: fade-out 3s forwards 2s;
 }
 
-#opt-out:target .opt-out-btn {
+.privacy_style #opt-out:target .opt-out-btn {
   display: none;
 }
 
-#opt-out:target .opt-out-message {
+.privacy_style #opt-out:target .opt-out-message {
   display: block;
 }
 
-.opt-out-message {
+.privacy_style .opt-out-message {
   display: none;
 }
 
@@ -810,47 +872,47 @@ text-align: center;
   to { opacity: 0; visibility: hidden; }
 }
 
-.privacy-section {
+.privacy_style .privacy-section {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #55237F;
 }
 
-.privacy-title {
+.privacy_style .privacy-title {
   color: #C987FF;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
 }
 
-.privacy-title::before {
+.privacy_style .privacy-title::before {
   content: "🐱";
   margin-right: 10px;
   font-size: 1.2em;
 }
 
-.data-table {
+.privacy_style .data-table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
 }
 
-.data-table th,
-.data-table td {
+.privacy_style .data-table th,
+.privacy_style .data-table td {
   padding: 12px;
   text-align: left;
   border: 1px solid #55237F;
 }
 
-.data-table th {
+.privacy_style .data-table th {
   background-color: #2E0059;
 }
 
-.data-table tr:nth-child(even) {
+.privacy_style .data-table tr:nth-child(even) {
   background-color: rgba(46, 0, 89, 0.3);
 }
 
-.blinking-text {
+.privacy_style .blinking-text {
   animation: blink-text 1s infinite;
 }
 
@@ -859,14 +921,14 @@ text-align: center;
   50% { opacity: 0; }
 }
 
-.highlighted {
+.privacy_style .highlighted {
   background-color: rgba(201, 135, 255, 0.2);
   padding: 2px 5px;
   border-radius: 3px;
 }
 
 /* Multiple watching eyes around the page */
-.watching-eye {
+.privacy_style .watching-eye {
   position: absolute;
   font-size: 1.5em;
   opacity: 0.3;
@@ -874,33 +936,33 @@ text-align: center;
   transition: opacity 0.3s, transform 0.3s;
 }
 
-.eye1 { top: 100px; right: 50px; }
-.eye2 { top: 300px; left: 30px; }
-.eye3 { top: 500px; right: 80px; }
-.eye4 { top: 700px; left: 60px; }
+.privacy_style .eye1 { top: 100px; right: 50px; }
+.privacy_style .eye2 { top: 300px; left: 30px; }
+.privacy_style .eye3 { top: 500px; right: 80px; }
+.privacy_style .eye4 { top: 700px; left: 60px; }
 
 /* Eyes light up when nearby content is hovered */
-.privacy-section:nth-child(2):hover ~ .eye1 {
+.privacy_style .privacy-section:nth-child(2):hover ~ .eye1 {
   opacity: 1;
   transform: scale(1.2);
 }
 
-.privacy-section:nth-child(3):hover ~ .eye2 {
+.privacy_style .privacy-section:nth-child(3):hover ~ .eye2 {
   opacity: 1;
   transform: scale(1.2);
 }
 
-.privacy-section:nth-child(4):hover ~ .eye3 {
+.privacy_style .privacy-section:nth-child(4):hover ~ .eye3 {
   opacity: 1;
   transform: scale(1.2);
 }
 
-.privacy-section:nth-child(5):hover ~ .eye4 {
+.privacy_style .privacy-section:nth-child(5):hover ~ .eye4 {
   opacity: 1;
   transform: scale(1.2);
 }
 
-.opt-out-btn {
+.privacy_style .opt-out-btn {
   background-color: #8E55FF;
   color: #0D001B;
   border: none;
@@ -912,17 +974,17 @@ text-align: center;
   display: inline-block;
 }
 
-.opt-out-btn:hover {
+.privacy_style .opt-out-btn:hover {
   background-color: #7647D4;
   transform: translateY(-2px);
 }
 
 /* Text highlighting animation for different paragraphs */
-.privacy-section p {
+.privacy_style .privacy-section p {
   position: relative;
 }
 
-.privacy-section p::after {
+.privacy_style .privacy-section p::after {
   content: "";
   position: absolute;
   top: 0;
@@ -933,19 +995,19 @@ text-align: center;
   opacity: 0;
 }
 
-.privacy-section:nth-child(2) p::after {
+.privacy_style .privacy-section:nth-child(2) p::after {
   animation: highlight-text 15s infinite 1s;
 }
 
-.privacy-section:nth-child(3) p::after {
+.privacy_style .privacy-section:nth-child(3) p::after {
   animation: highlight-text 15s infinite 4s;
 }
 
-.privacy-section:nth-child(4) p::after {
+.privacy_style .privacy-section:nth-child(4) p::after {
   animation: highlight-text 15s infinite 7s;
 }
 
-.privacy-section:nth-child(5) p::after {
+.privacy_style .privacy-section:nth-child(5) p::after {
   animation: highlight-text 15s infinite 10s;
 }
 
@@ -954,7 +1016,7 @@ text-align: center;
   3%, 10% { opacity: 1; }
 }
 
-.hidden-message {
+.privacy_style .hidden-message {
   color: transparent;
   font-size: 0.1px;
   position: absolute;
@@ -962,18 +1024,32 @@ text-align: center;
 }
 
 /* ========================================================
-   END OF: privacy.css
-   ======================================================== */
-
-
-
-
+  END OF: privacy.css
+======================================================== */
+   
+   
+   
+   
 /* ==========================================================
-   START OF: terms.css (Terms and Conditions Page Styles)
-   ========================================================== */
+  START OF: terms.css (Terms and Conditions Page Styles)
+========================================================== */
+  
+/* Scoped reset for terms_style */
+.terms_style {
+  display: block;
+  background-color: #0D001B; /* dark background */
+  color: #F8EFFE;            /* light text color */
+  font-family: "Poppins", sans-serif;
+}
+
+.terms_style *,
+.terms_style *::before,
+.terms_style *::after {
+  box-sizing: border-box;
+}
 
 /* Terms page specific styling */
-.legal-container {
+.terms_style .legal-container {
   background-color: #1a0a2c;
   border: 2px solid #55237F;
   border-radius: 6px;
@@ -982,45 +1058,45 @@ text-align: center;
   line-height: 1.6;
 }
 
-.legal-header {
+.terms_style .legal-header {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.legal-section {
+.terms_style .legal-section {
   margin-bottom: 20px;
 }
 
-.legal-title {
+.terms_style .legal-title {
   color: #C987FF;
   border-bottom: 1px solid #55237F;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
 
-.redacted {
+.terms_style .redacted {
   background-color: #000;
   color: #000;
   padding: 0 5px;
   transition: background-color 0.3s;
 }
 
-.redacted:hover {
+.terms_style .redacted:hover {
   background-color: transparent;
   color: #ff0000;
 }
 
-.warning {
+.terms_style .warning {
   color: #ff6b6b;
   font-weight: bold;
 }
 
-.fine-print {
+.terms_style .fine-print {
   font-size: 0.8em;
   color: #aaa;
 }
 
-.signature-area {
+.terms_style .signature-area {
   border: 1px dashed #55237F;
   padding: 20px;
   margin-top: 40px;
@@ -1028,11 +1104,11 @@ text-align: center;
 }
 
 /* Runaway button effect using checkbox hack */
-.accept-checkbox {
+.terms_style .accept-checkbox {
   display: none;
 }
 
-.accept-btn {
+.terms_style .accept-btn {
   display: inline-block;
   background-color: #8E55FF;
   color: #0D001B;
@@ -1046,7 +1122,7 @@ text-align: center;
   position: relative;
 }
 
-.accept-btn-container {
+.terms_style .accept-btn-container {
   position: relative;
   height: 80px;
   width: 200px;
@@ -1054,17 +1130,17 @@ text-align: center;
 }
 
 /* Button runs away on hover */
-.accept-btn-container:hover .accept-btn {
+.terms_style .accept-btn-container:hover .accept-btn {
   transform: translateY(-100px);
 }
 
 /* Alternative positions to move to */
-.accept-btn-container:hover:nth-child(odd) .accept-btn {
+.terms_style .accept-btn-container:hover:nth-child(odd) .accept-btn {
   transform: translateX(100px);
 }
 
 /* After hovering, show a message */
-.accept-btn-container:hover::after {
+.terms_style .accept-btn-container:hover::after {
   content: "Cannot escape your destiny...";
   position: absolute;
   top: 30px;
@@ -1076,11 +1152,11 @@ text-align: center;
 }
 
 /* When checkbox is checked (meaning they somehow clicked the button) */
-.accept-checkbox:checked ~ .accept-message {
+.terms_style .accept-checkbox:checked ~ .accept-message {
   display: block;
 }
 
-.accept-message {
+.terms_style .accept-message {
   display: none;
   padding: 20px;
   margin-top: 20px;
@@ -1095,7 +1171,7 @@ text-align: center;
   50% { background-color: #55237F; }
 }
 
-.footnote {
+.terms_style .footnote {
   font-size: 0.7em;
   text-align: center;
   margin-top: 30px;
@@ -1103,32 +1179,49 @@ text-align: center;
   opacity: 0.6;
 }
 
-.emphasis {
+   
+.terms_style .emphasis {
   font-style: italic;
   font-weight: bold;
   color: #ff9900;
 }
 
+   
 /* ==========================================================
-   END OF: terms.css
-   ========================================================== */
-
-
-
-
+  END OF: terms.css
+========================================================== */
+   
+   
+   
+   
 /* ==========================================================
-   START OF: upload.css (Upload Page Specific Styles)
-   ========================================================== */
+  START OF: upload.css (Upload Page Specific Styles)
+========================================================== */
 
+/* Scoped reset for upload_style */
+.upload_style {
+  display: block;
+  background-color: #0D001B; /* dark background */
+  color: #F8EFFE;            /* light text color */
+  font-family: "Poppins", sans-serif;
+}
 
+.upload_style *,
+.upload_style *::before,
+.upload_style *::after {
+  box-sizing: border-box;
+}
+
+   
+  /* Upload page specific styling */
+   
 /* Upload page specific styling */
-
-.upload-header {
+.upload_style .upload-header {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.warning-box {
+.upload_style .warning-box {
   background-color: rgba(255, 0, 0, 0.1);
   border: 1px solid #ff6b6b;
   padding: 15px;
@@ -1137,7 +1230,7 @@ text-align: center;
   overflow: hidden;
 }
 
-.warning-box::before {
+.upload_style .warning-box::before {
   content: "⚠️";
   position: absolute;
   top: 50%;
@@ -1146,25 +1239,24 @@ text-align: center;
   font-size: 2em;
 }
 
-.warning-box p {
+.upload_style .warning-box p {
   margin-left: 50px;
   color: #ff6b6b;
 }
 
-
 /* Upload Process Steps */
-.upload-process {
+.upload_style .upload-process {
   counter-reset: step;
   margin: 40px 0;
 }
 
-.step {
+.upload_style .step {
   position: relative;
   margin-bottom: 60px;
   padding-left: 70px;
 }
 
-.step::before {
+.upload_style .step::before {
   counter-increment: step;
   content: "Step " counter(step);
   position: absolute;
@@ -1187,15 +1279,15 @@ text-align: center;
   to { box-shadow: 0 0 25px rgba(155, 87, 255, 0.8); }
 }
 
-.step h3 {
+.upload_style .step h3 {
   margin-top: 0;
   color: #C987FF;
 }
 
-
 /* Brain Scan Visualization */
 /* Neural network animation for HTM State */
-.brain-scan, .neural-network {
+.upload_style .brain-scan,
+.upload_style .neural-network {
   height: 200px;
   background-color: #0D001B;
   border: 1px solid #55237F;
@@ -1204,7 +1296,7 @@ text-align: center;
   overflow: hidden;
 }
 
-.scan-line {
+.upload_style .scan-line {
   position: absolute;
   top: 0;
   left: 0;
@@ -1215,7 +1307,7 @@ text-align: center;
   z-index: 2;
 }
 
-.brain-grid {
+.upload_style .brain-grid {
   position: absolute;
   top: 0;
   left: 0;
@@ -1242,9 +1334,7 @@ text-align: center;
   100% { opacity: 0.2; background-size: 20px 20px; }
 }
 
-
-
-.neuron-grid {
+.upload_style .neuron-grid {
   position: absolute;
   inset: 0;
   background: 
@@ -1254,7 +1344,7 @@ text-align: center;
   animation: grid-pulse 3s infinite;
 }
 
-.neuron-grid::before {
+.upload_style .neuron-grid::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1278,17 +1368,15 @@ text-align: center;
   100% { opacity: 0.5; transform: scale(1); }
 }
 
-
-
 /* Digital soul extraction animation */
-.soul-extraction {
+.upload_style .soul-extraction {
   width: 100px;
   height: 100px;
   margin: 20px auto;
   position: relative;
 }
 
-.human-silhouette {
+.upload_style .human-silhouette {
   width: 50px;
   height: 100px;
   background-color: #C987FF;
@@ -1298,7 +1386,7 @@ text-align: center;
   left: 0;
 }
 
-.soul-particles {
+.upload_style .soul-particles {
   position: absolute;
   top: 0;
   left: 0;
@@ -1306,7 +1394,7 @@ text-align: center;
   height: 100%;
 }
 
-.soul-particle {
+.upload_style .soul-particle {
   position: absolute;
   width: 5px;
   height: 5px;
@@ -1315,31 +1403,31 @@ text-align: center;
   opacity: 0;
 }
 
-.soul-particle:nth-child(1) {
+.upload_style .soul-particle:nth-child(1) {
   top: 20%;
   left: 20%;
   animation: soul-extract 3s infinite 0.1s;
 }
 
-.soul-particle:nth-child(2) {
+.upload_style .soul-particle:nth-child(2) {
   top: 30%;
   left: 30%;
   animation: soul-extract 3s infinite 0.3s;
 }
 
-.soul-particle:nth-child(3) {
+.upload_style .soul-particle:nth-child(3) {
   top: 40%;
   left: 20%;
   animation: soul-extract 3s infinite 0.5s;
 }
 
-.soul-particle:nth-child(4) {
+.upload_style .soul-particle:nth-child(4) {
   top: 50%;
   left: 30%;
   animation: soul-extract 3s infinite 0.7s;
 }
 
-.soul-particle:nth-child(5) {
+.upload_style .soul-particle:nth-child(5) {
   top: 60%;
   left: 20%;
   animation: soul-extract 3s infinite 0.9s;
@@ -1347,33 +1435,31 @@ text-align: center;
 
 @keyframes soul-extract {
   0% { 
-      opacity: 0;
-      transform: translate(0, 0);
+    opacity: 0;
+    transform: translate(0, 0);
   }
   50% { 
-      opacity: 1;
-      transform: translate(40px, -10px);
+    opacity: 1;
+    transform: translate(40px, -10px);
   }
   100% { 
-      opacity: 0;
-      transform: translate(80px, 0);
+    opacity: 0;
+    transform: translate(80px, 0);
   }
 }
 
-
-
 /* Upload Progress Bar */
-.progress-container {
+.upload_style .progress-container {
   margin: 30px 0;
 }
 
-.progress-label {
+.upload_style .progress-label {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
-.progress-bar {
+.upload_style .progress-bar {
   height: 20px;
   background-color: #0D001B;
   border: 1px solid #55237F;
@@ -1382,7 +1468,7 @@ text-align: center;
   position: relative;
 }
 
-.progress-value {
+.upload_style .progress-value {
   height: 100%;
   background: linear-gradient(90deg, #361665, #C987FF);
   width: 0;
@@ -1399,9 +1485,8 @@ text-align: center;
   100% { width: 100%; }
 }
 
-
 /* Terminal effect */
-.terminal {
+.upload_style .terminal {
   background-color: #0a0a0a;
   border: 1px solid #55237F;
   border-radius: 5px;
@@ -1411,7 +1496,7 @@ text-align: center;
   color: #C987FF;
 }
 
-.cursor {
+.upload_style .cursor {
   display: inline-block;
   width: 8px;
   height: 15px;
@@ -1426,9 +1511,8 @@ text-align: center;
   50% { background-color: #C987FF; }
 }
 
-
 /* Typewriter effect for status messages */
-.status-message {
+.upload_style .status-message {
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #C987FF;
@@ -1442,16 +1526,15 @@ text-align: center;
   to { width: 100%; }
 }
 
-
-.upload-complete-side .warning-box {
+.upload_style .upload-complete-side .warning-box {
   background-color: rgba(255, 0, 0, 0.1);
   border: 1px solid #ff6b6b;
-  padding: 15px 15px 15px 60px; 
+  padding: 15px 15px 15px 60px;
   margin: 20px 0;
   position: relative;
 }
 
-.upload-complete-side .warning-box::before {
+.upload_style .upload-complete-side .warning-box::before {
   content: "⚠️";
   position: absolute;
   top: 50%;
@@ -1460,17 +1543,13 @@ text-align: center;
   font-size: 2em;
 }
 
-
-
-
-
 /* Once progress is complete, show the complete message */
 /* upload complete animation */
-.upload-complete-container {
+.upload_style .upload-complete-container {
   position: relative;
 }
 
-.upload-complete {
+.upload_style .upload-complete {
   display: none;
   text-align: center;
   padding: 20px;
@@ -1485,9 +1564,7 @@ text-align: center;
   to { opacity: 1; }
 }
 
-
-
-.upload-form-side {
+.upload_style .upload-form-side {
   position: static;
   display: block;
   width: 100%;
@@ -1496,7 +1573,7 @@ text-align: center;
   box-sizing: border-box;
 }
 
-.upload-complete-side {
+.upload_style .upload-complete-side {
   display: none;
   background-color: #210B35;
   border: 2px solid #55237F;
@@ -1507,57 +1584,53 @@ text-align: center;
 }
 
 /* When checkbox is checked, show the complete side */
-#upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
+.upload_style #upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
   display: none;
 }
 
-#upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
+.upload_style #upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
   display: block;
   animation: fade-in 1s forwards;
 }
-
-
 
 /* Checkbox hack to create interactivity */
-#upload-complete-checkbox {
+.upload_style #upload-complete-checkbox {
   display: none;
 }
 
- #upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
+.upload_style #upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
   display: none;
 }
 
-#upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
+.upload_style #upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
   display: block;
   animation: fade-in 1s forwards;
 }
-
-
-
+   
 /* Upload form styling */
-.consent-form {
+.upload_style .consent-form {
   margin: 20px 0;
 }
 
-.form-group {
+.upload_style .form-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.upload_style .form-group label {
   display: block;
   margin-bottom: 10px;
   color: #C987FF;
 }
 
-.consent-checkbox {
+.upload_style .consent-checkbox {
   margin-right: 10px;
 }
 
-.consent-checkbox:invalid + label {
+.upload_style .consent-checkbox:invalid + label {
   color: #ff6b6b;
 }
 
-.upload-button {
+.upload_style .upload-button {
   display: block;
   width: 100%;
   padding: 15px;
@@ -1574,18 +1647,17 @@ text-align: center;
   overflow: hidden;
 }
 
-
-.upload-button:hover {
+.upload_style .upload-button:hover {
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(201, 135, 255, 0.7);
 }
 
-.upload-button:focus {
+.upload_style .upload-button:focus {
   outline: 2px solid #C987FF;
   box-shadow: 0 0 20px rgba(201, 135, 255, 0.7);
 }
 
-.upload-button::before {
+.upload_style .upload-button::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -1602,21 +1674,17 @@ text-align: center;
   100% { left: 150%; }
 }
 
-
-
-
-/* Form validation style */
-#upload-form input[type="checkbox"]:required:invalid + label {
+   
+.upload_style #upload-form input[type="checkbox"]:required:invalid + label {
   color: #ff6b6b;
 }
 
 /* Hide the checkbox until form is valid */
-#upload-complete-checkbox {
+.upload_style #upload-complete-checkbox {
   display: none;
 }
 
-
-footer {
+.upload_style footer {
   margin-left: 15%;
   padding: 20px;
   background-color: #150033;
@@ -1629,22 +1697,20 @@ footer {
   box-sizing: border-box;
 }
 
-/* Ensure the main container pushes the footer down */
-#main-container {
+.upload_style #main-container {
   min-height: calc(100vh - 80px);
   margin-left: 15%;
   padding: 20px;
   box-sizing: border-box;
 }
 
-
 /* Form validation style - make invalid checkboxes have red text */
-.consent-checkbox:invalid + label {
+.upload_style .consent-checkbox:invalid + label {
   color: #ff6b6b;
 }
 
 /* Make sure the button is disabled until form is valid */
-.upload-button {
+.upload_style .upload-button {
   display: block;
   width: 100%;
   padding: 15px;
@@ -1659,12 +1725,13 @@ footer {
   overflow: hidden;
 }
 
-.upload-button:hover {
+   
+.upload_style .upload-button:hover {
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(201, 135, 255, 0.7);
 }
 
-.upload-button::before {
+.upload_style .upload-button::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -1677,32 +1744,31 @@ footer {
 }
 
 /* Make button disabled until valid */
-#upload-form:invalid .upload-button {
+.upload_style #upload-form:invalid .upload-button {
   opacity: 0.5;
   pointer-events: none;
 }
 
-#upload-form:valid .upload-button {
+.upload_style #upload-form:valid .upload-button {
   opacity: 1;
   pointer-events: auto;
 }
 
-
-#upload-form .consent-checkbox:required:not(:checked) + label {
+   
+.upload_style #upload-form .consent-checkbox:required:not(:checked) + label {
   color: #ff6b6b;
 }
 
-
 /* This creates the checkbox hack for page transition */
-#upload-complete-checkbox {
+.upload_style #upload-complete-checkbox {
   display: none;
 }
 
-#upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
+.upload_style #upload-complete-checkbox:checked ~ .upload-complete-container .upload-form-side {
   display: none;
 }
 
-#upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
+.upload_style #upload-complete-checkbox:checked ~ .upload-complete-container .upload-complete-side {
   display: block;
   animation: fade-in 1s forwards;
 }
@@ -1717,36 +1783,34 @@ footer {
   to { opacity: 1; }
 }
 
-.button-container {
+   
+.upload_style .button-container {
   width: 100%;
   margin: 20px 0;
 }
 
-#upload-complete-checkbox {
+.upload_style #upload-complete-checkbox {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
 /* ==========================================================
-   END OF: upload.css
-   ========================================================== */
-
+  END OF: upload.css
+========================================================== */
 
 
 
 /* ==========================================================
-   START OF: upload.css (Upload Page Specific Styles)
-   ========================================================== */
-
-
+  START OF: manage.css (manage page specific styling)
+========================================================== */
 /* Manage page specific styling */
-div .eoi_data_table {
+.manage_style div .eoi_data_table {
   width: 100%;
   overflow-x: scroll;
 }
 
-.no-gradient {
+.manage_style .no-gradient {
   background: #602e95;
   color: #F8EFFE;
 }
@@ -1755,7 +1819,7 @@ div .eoi_data_table {
 /* TESTING DAVINA */
 
 /* Admin Login Page */
-.login-box {
+.manage_style .login-box {
   max-width: 400px;
   margin: 80px auto;
   padding: 20px;
@@ -1763,17 +1827,17 @@ div .eoi_data_table {
   border: 2px solid #55237F;
   border-radius: 6px;
 }
-.login-box h1 {
+.manage_style .login-box h1 {
   text-align: center;
   color: #C987FF;
   margin-bottom: 1em;
 }
-.login-box label {
+.manage_style .login-box label {
   display: block;
   margin-bottom: 5px;
   color: #F8EFFE;
 }
-.login-box input {
+.manage_style .login-box input {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -1782,7 +1846,7 @@ div .eoi_data_table {
   border-radius: 4px;
   color: #F8EFFE;
 }
-.login-box .btn {
+.manage_style .login-box .btn {
   width: 100%;
   padding: 10px;
   background: #8E55FF;
@@ -1794,7 +1858,7 @@ div .eoi_data_table {
 }
 
 /* Admin Login button in footer */
-.admin-login-btn {
+.manage_style .admin-login-btn {
   display: inline-block;
   padding: 8px 16px;
   background: #8E55FF;
@@ -1805,27 +1869,31 @@ div .eoi_data_table {
 }
 
 /* Admin Dashboard */
-.admin-dashboard h1 {
+.manage_style .admin-dashboard h1 {
   color: #C987FF;
   margin-bottom: 0.5em;
 }
-.admin-dashboard h2 {
+.manage_style .admin-dashboard h2 {
   margin-top: 2em;
   color: #C987FF;
 }
-.admin-dashboard table.admin-table {
+.manage_style .admin-dashboard table.admin-table {
   width: 100%;
   margin-bottom: 2em;
   border-collapse: collapse;
   background-color: rgba(21, 0, 51, 0.6);
 }
-.admin-dashboard th,
-.admin-dashboard td {
+.manage_style .admin-dashboard th,
+.manage_style .admin-dashboard td {
   border: 1px solid #55237F;
   padding: 6px;
   color: #F8EFFE;
   text-align: left;
 }
-.admin-dashboard th {
+.manage_style .admin-dashboard th {
   background: #2E0059;
 }
+
+/* ==========================================================
+  END OF: manage.css
+========================================================== */
