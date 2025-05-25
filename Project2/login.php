@@ -3,7 +3,23 @@ session_start();
 require_once("settings.php");
 
 $error = '';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+// Lockout configuration
+$lockout_time = 5 * 60; // 5 minutes
+if (!isset($_SESSION['failed_attempts'])) {
+    $_SESSION['failed_attempts'] = 0;
+    $_SESSION['last_attempt_time'] = 0;
+}
+
+// Check if user is locked out
+if ($_SESSION['failed_attempts'] >= 3) {
+    $time_since_last = time() - $_SESSION['last_attempt_time'];
+    if ($time_since_last < $lockout_time) {
+        $error = "Too many failed attempts. Please wait " . ceil(($lockout_time - $time_since_last) / 60) . " more minute(s).";
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && empty($error)) {
     $id   = trim($_POST['admin_id'] ?? '');
     $pass = $_POST['password'] ?? '';
 
@@ -18,12 +34,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_close($stmt);
         mysqli_close($conn);
 
-        //Plaintext password check (because your DB has plain passwords)
+        // Plaintext password check (since your DB stores plain text)
         if ($pass === $db_pass) {
             $_SESSION['admin_logged_in'] = true;
-            header('Location: database.php');
+            $_SESSION['failed_attempts'] = 0; // Reset counter
+            header('Location: eoi_data.php');
             exit;
         } else {
+            $_SESSION['failed_attempts']++;
+            $_SESSION['last_attempt_time'] = time();
             $error = 'Invalid ID or password';
         }
     } else {
@@ -31,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
