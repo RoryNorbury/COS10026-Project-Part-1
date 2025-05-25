@@ -3,10 +3,10 @@ Dear reader and teammates, this is in fact sectioned for your convenience.
 i tried making this easy for you.
 here is where each section starts
 styles.css: line 15
-index.css: line 460
-privacy.css: line 773
-terms.css: line 1033
-upload.css: line 1197
+index.css: line 475
+privacy.css: line 788
+terms.css: line 1048
+upload.css: line 1212
 good luck.
 in consumptive despair, Renad
 */
@@ -450,7 +450,7 @@ in consumptive despair, Renad
   border-radius: 8px;
 }
 
-/* === MOBILE NAVIGATION TEXT FIX === */
+/* mobile nav */
 @media screen and (max-width: 600px) {
   .global_style nav a {
     font-size: 0.65rem;
