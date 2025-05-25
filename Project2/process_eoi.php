@@ -14,7 +14,7 @@ function sanitise_input($data) {
 
 // prevent direct URL access, only allow POST requests
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: apply.php"); // redirect to the application form
+    header("Location: project2/apply.php"); // redirect to the application form
     exit();
 }
 
@@ -30,7 +30,7 @@ if (!$conn) {
     echo "<div id='main-container' style='padding: 20px; text-align: center;'><h1>Database Connection Error</h1>";
     echo "<p>We are experiencing technical difficulties. Please try again later.</p>";
     echo "<p><em>Error details (for debugging): " . mysqli_connect_error() . " (Code: " . mysqli_connect_errno() . ")</em></p>";
-    echo "<p><a href='apply.php'>Go back to the Application Form</a></p>";
+    echo "<a href='project2/apply.php'>Back to Application Form</a>";
     echo "</div></body></html>";
     exit();
 }
