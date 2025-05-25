@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && empty($error)) {
         if ($pass === $db_pass) {
             $_SESSION['admin_logged_in'] = true;         // Set login session
             $_SESSION['failed_attempts'] = 0;            // Reset attempt counter
-            header('Location: eoi_data.php');            // Redirect to eoi_data.php
+            header('Location: manage.php');            // Redirect to eoi_data.php
             exit;                                       
         } else {
             $_SESSION['failed_attempts']++;              // Add failed attempts
