@@ -4,11 +4,11 @@ $metaDescription = "Explore open job positions at Meow Meows";
 $metaKeywords = "Jobs, Careers, Meow Meows, Tech, Consciousness Upload";
 include 'header.inc';
 include 'nav.inc';
-include_once '../settings.php';
+include_once 'settings.php';
 
 
 
-// returns the umber of positions to display
+// returns the number of positions to display
 function get_job_count()
 {
     global $host, $user, $pswd, $dbnm;
@@ -116,6 +116,7 @@ function get_job_listing($job_id)
 }
 ?>
 
+<body class="global_style">
 <!-- Main content container, offset by nav bar -->
 <div id="main-container">
     <h1>Current Job Openings</h1>
@@ -144,3 +145,4 @@ function get_job_listing($job_id)
 
 <!-- Footer with basic site links -->
 <?php include 'footer.inc'; ?>
+</body>

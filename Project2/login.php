@@ -40,22 +40,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>Admin Login</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body class="global_style manage_style">
   <?php include 'nav.inc'; ?>
-  <div class="login-box">
-    <h1>Admin Login</h1>
-    <?php if ($error): ?>
-      <p class="error"><?= htmlspecialchars($error) ?></p>
-    <?php endif; ?>
-    <form method="post">
-      <label for="admin_id">Admin ID</label>
-      <input type="text" id="admin_id" name="admin_id" required>
-
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
-
-      <button type="submit" class="btn">Log In</button>
-    </form>
+  <div id="main-container">
+    <div class="login-box">
+      <h1>Admin Login</h1>
+      <?php if ($error): ?>
+        <p class="error"><?= htmlspecialchars($error) ?></p>
+        <?php endif; ?>
+        <form method="post">
+          <label for="admin_id">Admin ID</label>
+          <input type="text" id="admin_id" name="admin_id" required>
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          
+          <button type="submit" class="btn">Log In</button>
+        </form>
+      </div>
   </div>
   <?php include 'footer.inc'; ?>
 </body>
