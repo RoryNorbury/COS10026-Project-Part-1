@@ -93,6 +93,9 @@ if (empty($_POST["action"])) {
     user_option_button("Delete all EOIs for specific position", "d");
     user_option_button("Change status of EOI", "e");
     $address = htmlspecialchars($_SERVER["PHP_SELF"]) . "#Title2";
+    user_option_button("List all Consciousness Uploads", "f");
+    user_option_button("List uploads by status", "g");
+    user_option_button("Update upload status", "h");
     if ($user_option_name != "") {
         echo "<h2 id='Title2'>$user_option_name</h2>";
     }
@@ -248,6 +251,88 @@ if (empty($_POST["action"])) {
         $query = "SELECT EOInumber, Status, JobReferenceNumber, FirstName, LastName FROM eoi";
         results_table($query, $host, $user, $pswd, $dbnm);
     }
+
+    // list all consciousness uploads
+    if ($user_option == "f") {
+        $query = "SELECT UploadID, FirstName, LastName, Email, SubscriptionPlan, Status, UploadTimestamp FROM consciousness_uploads ORDER BY UploadTimestamp DESC";
+        results_table($query, $host, $user, $pswd, $dbnm);
+    }
+
+    // list uploads by status
+    if ($user_option == "g") {
+        if (empty($_POST["status_filter"])) {
+            $status_filter = "";
+        } else {
+            $status_filter = $_POST["status_filter"];
+        }
+        echo
+            "<form method='post' action=$address>
+                <input type='hidden' name='user_option' value='$user_option'>
+                <input type='hidden' name='user_option_name' value='$user_option_name'>
+                <p>Filter by status:
+                <select id='status_filter' name='status_filter' required>
+                    <option value='Pending'" . (($status_filter == "Pending") ? " selected" : "") . ">Pending</option>
+                    <option value='Processing'" . (($status_filter == "Processing") ? " selected" : "") . ">Processing</option>
+                    <option value='Uploaded'" . (($status_filter == "Uploaded") ? " selected" : "") . ">Uploaded</option>
+                    <option value='Failed'" . (($status_filter == "Failed") ? " selected" : "") . ">Failed</option>
+                </select>
+                </p>
+                <input type='submit' name='action' value='Go'>
+                </form>";
+
+        if ($action == "Go" && $status_filter != "") {
+            $query = "SELECT UploadID, FirstName, LastName, Email, SubscriptionPlan, Status, UploadTimestamp FROM consciousness_uploads WHERE Status = '" . $status_filter . "' ORDER BY UploadTimestamp DESC";
+            results_table($query, $host, $user, $pswd, $dbnm);
+        }
+    }
+
+    // update upload status
+    if ($user_option == "h") {
+        if (empty($_POST["upload_id"])) {
+            $upload_id = "";
+        } else {
+            $upload_id = $_POST["upload_id"];
+        }
+        if (empty($_POST["new_status"])) {
+            $new_status = "";
+        } else {
+            $new_status = $_POST["new_status"];
+        }
+
+        echo
+            "<form method='post' action=$address>
+            <input type='hidden' name='user_option' value='$user_option'>
+            <input type='hidden' name='user_option_name' value='$user_option_name'>
+            <p>Upload ID: <input type='number' name='upload_id' min='1' value='" . (($upload_id != "") ? $upload_id : "") . "' required></p>
+            <p>New Status: <select id='new_status' name='new_status' required>
+            <option value='Pending'>Pending</option>
+            <option value='Processing'>Processing</option>
+            <option value='Uploaded'>Uploaded</option>
+            <option value='Failed'>Failed</option>
+            </select></p>
+            <input type='submit' name='action' value='Update'>
+            </form>
+            ";
+
+        if ($action == "Update" && $upload_id != "" && $new_status != "") {
+            $query = "UPDATE consciousness_uploads SET Status = '" . $new_status . "' WHERE UploadID = $upload_id";
+            $db_conn = mysqli_connect($host, $user, $pswd, $dbnm);
+            if ($db_conn) {
+                $result = mysqli_query($db_conn, $query);
+                if ($result) {
+                    echo "<p>Status updated successfully!</p>";
+                } else {
+                    echo "<p>Error updating status: " . mysqli_error($db_conn) . "</p>";
+                }
+                mysqli_close($db_conn);
+            }
+        }
+
+        echo "<h3>Current Uploads:</h3>";
+        $query = "SELECT UploadID, FirstName, LastName, Status, UploadTimestamp FROM consciousness_uploads ORDER BY UploadTimestamp DESC";
+        results_table($query, $host, $user, $pswd, $dbnm);
+    }
+
     ?>
 
 </div>
