@@ -22,11 +22,11 @@ c: List all EOIs for a particular applicant given their first name, last name or
 d: Delete all EOIs with a specified job reference number
 e: Change the Status of an EOI
 */
-require_once("../settings.php");
+require_once("settings.php");
 // include("menu_bar.inc");
 function user_option_button($option_name, $option_value)
 {
-    $address = htmlspecialchars($_SERVER["PHP_SELF"]);
+    $address = htmlspecialchars($_SERVER["PHP_SELF"])."#User_options";
     echo
         "<form method='post' action='$address'>
             <input type='hidden' name='user_option' value='$option_value'>
@@ -84,7 +84,7 @@ if (empty($_POST["action"])) {
 ?>
 <div id="main-container">
     <h1>Manage Job Applications</h1>
-    <h2>User options:</h2>
+    <h2 id="User_options">User options:</h2>
     <?php
     // buttons for each action
     user_option_button("List all EOIs", "a");
@@ -92,12 +92,12 @@ if (empty($_POST["action"])) {
     user_option_button("List EOIs for a specific applicant", "c");
     user_option_button("Delete all EOIs for specific position", "d");
     user_option_button("Change status of EOI", "e");
+    $address = htmlspecialchars($_SERVER["PHP_SELF"]) . "#Title2";
     user_option_button("List all Consciousness Uploads", "f");
     user_option_button("List uploads by status", "g");
     user_option_button("Update upload status", "h");
-    $address = htmlspecialchars($_SERVER["PHP_SELF"]);
     if ($user_option_name != "") {
-        echo "<h2>$user_option_name</h2>";
+        echo "<h2 id='Title2'>$user_option_name</h2>";
     }
     // option-specific interface:
     // List all EOIs
@@ -189,7 +189,7 @@ if (empty($_POST["action"])) {
                     <option value='MM00C'" . (($job_ref_no == "MM00C") ? "Selected" : "") . ">Transition Technician (MM00C)</option>
                 </select>
                 </p>
-                <input type='submit' name='action' value='Go'> <span style='color:red'> WARNING: This will action cannot be undone!</span>
+                <input type='submit' name='action' value='Go'> <span style='color:red'> WARNING: This action cannot be undone!</span>
                 </form>";
         if ($action == "Go" && $job_ref_no != "") {
             $query = "DELETE FROM eoi WHERE JobReferenceNumber = '" . $job_ref_no . "'";

@@ -3001,7 +3001,7 @@ in consumptive despair, Renad
 /* Manage page specific styling */
 .manage_style div .eoi_data_table {
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .manage_style .no-gradient {

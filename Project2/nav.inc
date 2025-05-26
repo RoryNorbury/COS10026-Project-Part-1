@@ -5,5 +5,6 @@
     <a href="apply.php">Apply for a Job</a>
     <a href="about.php">About Us</a>
     <a href="upload.php">Upload Consciousness</a>
+    <a href="enhancements.php">Enhancements</a>
     <a href="user_login.php">👤 User Portal</a>
 </nav>
