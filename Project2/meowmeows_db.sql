@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 26, 2025 at 02:03 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: May 26, 2025 at 02:48 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `meowmeows_db`
 --
-CREATE DATABASE IF NOT EXISTS `meowmeows_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `meowmeows_db`;
 
 -- --------------------------------------------------------
 
@@ -132,7 +130,8 @@ CREATE TABLE `eoi` (
 
 INSERT INTO `eoi` (`EOInumber`, `JobReferenceNumber`, `FirstName`, `LastName`, `DateOfBirth`, `Gender`, `StreetAddress`, `SuburbTown`, `State`, `Postcode`, `EmailAddress`, `PhoneNumber`, `Skill1`, `Skill2`, `Skill3`, `OtherSkills`, `Status`, `ApplicationTimestamp`) VALUES
 (1, 'MM26C', 'Oscar', 'Schmidt', '20/08/2005', 'Male', '14 test street', 'melbourne', 'VIC', '3000', 'meowmeows@test.com', '0401000000', 1, 0, 1, 'Rahhhhh', 'New', '2025-05-15 14:34:12'),
-(2, 'MM00C', 'Rory', 'Norbury', '01/01/2000', 'Male', '12 Test Street', 'Melbourne', 'VIC', '3000', 'meowmeows@test.com', '0481000000', 1, 1, 1, 'No conscience', 'New', '2025-05-17 16:57:28');
+(2, 'MM00C', 'Rory', 'Norbury', '01/01/2000', 'Male', '12 Test Street', 'Melbourne', 'VIC', '3000', 'meowmeows@test.com', '0481000000', 1, 1, 1, 'No conscience', 'New', '2025-05-17 16:57:28'),
+(3, 'MM00C', 'Silly', 'Goose', '2000-05-14', 'Other', '24 silly street', 'insanity', 'VIC', '3000', 'sillygoose@test.com', '0400000010', 1, 1, 1, 'I am amazing and overqualified and amazing and silly and should get the job', 'New', '2025-05-18 17:23:54');
 
 -- --------------------------------------------------------
 
