@@ -2,6 +2,7 @@
 $pageTitle = "Meow Meows - Your Digital Afterlife";
 $metaDescription = "Meow Meows - Upload your consciousness to our secure servers";
 $metaKeywords = "consciousness upload, digital afterlife, immortality";
+include 'admin_logout.php';
 include 'header.inc';
 include 'nav.inc';
 ?>
