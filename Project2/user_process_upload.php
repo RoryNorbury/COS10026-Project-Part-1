@@ -313,4 +313,5 @@ if (!empty($errors)) {
 }
 
 mysqli_close($conn);
+}
 ?>
